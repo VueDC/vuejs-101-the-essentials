@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js 101 Demo: Harry Potter World (Final)</title>
+</head>
+
+<body>
+    <div id="diagon-alley" class="diagon-alley">
+        <div class="parchment">
+            <h1>{{ name }}</h1>
+            <h2>House:</h2>
+            <p>{{ house }}</p>
+            <h2>Wand:</h2>
+            <p>{{ wand }}</p>
+            <h2>Wallet</h2>
+            <ul class="wallet">
+                <li v-for="(amount, name) in wallet" :class="name">
+                    {{ name }}: {{ amount }}
+                </li>
+            </ul>
+            <div class="parchment__cta">
+                <button @click="visitGringotts">Visit Gringotts</button>
+                <button @click="visitDiagonAlley">Visit Diagon Alley</button>
+                <button @click="drinkButterbeer" :disabled="wallet.sickles < 5">Drink Butterbeer</button>
+                <button @click="eatAtTheLeakyCauldron" :disabled="wallet.knuts < 25">Eat at The Leaky Cauldron</button>
+            </div>
+        </div>
+        <div v-if="atGringotts" id="gringotts" class="gringotts" />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script>
+        const adventure = new Vue({
+            el: '#diagon-alley',
+            data: {
+                name: 'Mr. B. Hong',
+                house: 'Ravenclaw',
+                wand: '12.5" larch wood w/ Dragon heartstring core',
+                wallet: {
+                    galleons: 12,
+                    sickles: 38,
+                    knuts: 274
+                },
+                atGringotts: false
+            },
+            methods: {
+                visitGringotts() {
+                    this.atGringotts = true
+                    this.wallet.sickles = 50
+                    this.wallet.knuts = 100
+                },
+                visitDiagonAlley() {
+                    this.atGringotts = false
+                },
+                drinkButterbeer() {
+                    this.wallet.sickles -= 5
+                },
+                eatAtTheLeakyCauldron() {
+                    this.wallet.knuts -= 25
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
