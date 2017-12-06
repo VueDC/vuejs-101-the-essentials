@@ -1,6 +1,12 @@
 body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	height: 100vh;
 }
@@ -23,6 +29,7 @@ body {
 	width: 400px;
 	height: 400px;
 	border-radius: 50%;
+	-webkit-transform: rotate(-30deg);
 	transform: rotate(-30deg);
 	font-weight: 800;
 	background-color: #e3201e;
@@ -31,6 +38,15 @@ body {
 	font-size: 3rem;
 	box-shadow: 0px 30px 10px -10px rgba(0, 0, 0, 0.4);
 	border: 10px solid #920012;
+}
+
+.message-form {
+	position: absolute;
+	top: 80%;
+	left: calc(50% - 120px);
+}
+.message-form__label {
+	font-weight: 600;
 }
 
 .wrapper {

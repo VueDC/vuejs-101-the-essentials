@@ -13,6 +13,10 @@
     <div id="app" class="wrapper">
         <canvas id="canvas" class="confetti-canvas"></canvas>
         <button id="easy-button" class="easy-button" @click="fireConfetti">{{ message }}</button>
+        <form class="message-form">
+            <label for="message" class="message-form__label">Message: </label>
+            <input v-model="message" type="text" />
+        </form>
     </div>
 
     <script src="that-was-easy.js"></script>
