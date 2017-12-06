@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js 101 - Exercise #3: Rick Generator (Final)</title>
+</head>
+
+<body>
+    <div id="app" class="app-wrapper">
+        <div id="image-wrapper" class="image-wrapper" @click="updatePosition" :style="{ backgroundImage: 'url(' + imageUrl + ')' }">
+            <div class="template-wrapper" id="template-wrapper" :style="{ top: y, left: x, width: wrapperWidth }">
+                <div class="speech-bubble">
+                    <p>I'm {{ noun }} Rick!</p>
+                </div>
+                <img class="rick-face" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/262582/PickleRickFace.svg" alt="Rick Face Template">
+            </div>
+        </div>
+        <button id="toggle-menu" class="toggle-menu" @click="showMenu = !showMenu">Toggle Menu</button>
+
+        <aside v-if="showMenu" id="side-menu" class="side-menu">
+            <form class="side-menu__form">
+                <label for="noun">Noun</label>
+                <input type="text" id="noun" v-model="noun" />
+                <label for="background-image">Background Image</label>
+                <input type="text" id="background-image" v-model="imageUrl" />
+            </form>
+        </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    noun: 'Pickle',
+                    x: 20 + 'px',
+                    y: 50 + 'px',
+                    showMenu: true,
+                    wrapperWidth: 600 + 'px',
+                    imageUrl: 'https://vignette.wikia.nocookie.net/clubpenguin/images/7/71/Pickle.png/revision/latest?cb=20140205184407'
+                }
+            },
+            methods: {
+                updatePosition(event) {
+                    let templateWrapper = document.querySelector('#template-wrapper')
+                    let wrapperWidth = Number(templateWrapper.style.width.replace('px', ''))
+
+                    this.x = event.clientX - (wrapperWidth / 2) + 'px'
+                    this.y = event.clientY - (wrapperWidth / 2) + 'px'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

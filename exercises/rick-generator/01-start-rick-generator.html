@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js 101 - Exercise #3: Rick Generator (Start)</title>
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <div id="image-wrapper" class="image-wrapper" style="background-image: url('https://vignette.wikia.nocookie.net/clubpenguin/images/7/71/Pickle.png/revision/latest?cb=20140205184407')">
+            <div class="template-wrapper" id="template-wrapper">
+                <div class="speech-bubble">
+                    <p>I'm Pickle Rick!</p>
+                </div>
+                <img class="rick-face" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/262582/PickleRickFace.svg" alt="Rick Face Template">
+            </div>
+        </div>
+        <button id="toggle-menu" class="toggle-menu">Toggle Menu</button>
+
+        <aside id="side-menu" class="side-menu">
+            <form class="side-menu__form">
+                <label for="noun">Noun</label>
+                <input type="text" id="noun" />
+                <label for="background-image">Background Image</label>
+                <input type="text" id="background-image" />
+            </form>
+        </aside>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+</body>
+
+</html>
