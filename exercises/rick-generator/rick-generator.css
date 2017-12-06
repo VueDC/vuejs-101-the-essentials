@@ -1,4 +1,4 @@
-.wrapper {
+.app-wrapper {
 	height: 100vh;
 	position: relative;
 }
@@ -10,26 +10,34 @@
 	height: 100vh;
 }
 
-.toggle-menu {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	width: 100px;
-	height: 100px;
-	background-color: #222;
-	color: #eee;
-	border-radius: 50%;
-}
-
 .rick-face {
 	position: absolute;
 	top: 170px;
 	left: 200px;
 }
 
-.wrapper {
-	position: relative;
-	height: 400px;
+.side-menu {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 20px;
+	background-color: #eee;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		input {
+			margin-top: 0.75rem;
+			margin-bottom: 1rem;
+		}
+
+		label {
+			font-weight: 600;
+		}
+	}
 }
 
 .speech-bubble {
@@ -57,26 +65,18 @@
 	}
 }
 
-.side-menu {
-	border: 1px solid #ccc;
-	border-radius: 4px;
+.template-wrapper {
+	position: relative;
+	height: 400px;
+}
+
+.toggle-menu {
 	position: absolute;
-	top: 10px;
-	right: 10px;
-	padding: 20px;
-	background-color: #eee;
-
-	&__form {
-		display: flex;
-		flex-direction: column;
-
-		input {
-			margin-top: 0.75rem;
-			margin-bottom: 1rem;
-		}
-
-		label {
-			font-weight: 600;
-		}
-	}
+	bottom: 20px;
+	right: 20px;
+	width: 100px;
+	height: 100px;
+	background-color: #222;
+	color: #eee;
+	border-radius: 50%;
 }
