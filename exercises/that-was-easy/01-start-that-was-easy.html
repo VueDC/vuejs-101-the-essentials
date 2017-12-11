@@ -1,21 +1,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue.js 101 - Exercise #1: That Was Easy! (Start)</title>
-    <link rel="stylesheet" href="that-was-easy.css">
-    <link href="https://fonts.googleapis.com/css?family=Coda:800" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Vue.js 101 - Exercise #1: That Was Easy (Final)</title>
+	<link rel="stylesheet" href="that-was-easy.css">
+	<link href="https://fonts.googleapis.com/css?family=Coda:800" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper">
-        <canvas id="canvas" class="confetti-canvas"></canvas>
-        <button id="easy-button" class="easy-button">Static Message</button>
-    </div>
+	<div id="app" class="wrapper">
+		<canvas id="canvas" class="confetti-canvas"></canvas>
+		<!-- Step 8: Attach a click event to the button which calls the method `fireConfetti` -->
+		<button id="easy-button" class="easy-button" @click="fireConfetti">
+			<!-- Step 5: Update the text in the button to be rendered by the data property `message` -->
+			Static Message
+		</button>
+		<form class="message-form">
+			<label for="message" class="message-form__label">Message: </label>
+			<!-- Step 6: Use two-way binding to dynamically update the `message` data property -->
+			<input type="text" class="message-form__input" />
+		</form>
+	</div>
 
-    <script src="that-was-easy.js"></script>
+	<script src="that-was-easy.js"></script>
+	<!-- Step 1: Include a script that points to the CDN for vue.min.js -->
+	<script src=""></script>
+	<script>
+		// Step 2: Declare a new instance of Vue
+		const app = new ({
+			// Step 3: Target the #app elemewnt
+			el: '',
+			// Step 4: Configure a `message` property with
+			// 'It Works!' as its value
+			data: {},
+			// Step 7: Define a new method called `fireConfetti`
+			// and assign it a method of `animateConfetti`
+			methods: {
+				fireConfetti: animateConfetti
+			}
+		})
+	</script>
 </body>
 
 </html>

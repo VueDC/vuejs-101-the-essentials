@@ -9,6 +9,7 @@ body {
 	-ms-flex-align: center;
 	align-items: center;
 	height: 100vh;
+	font-family: sans-serif;
 }
 
 .confetti-canvas {
@@ -23,7 +24,7 @@ body {
 
 .easy-button {
 	position: absolute;
-	top: calc(50% - 180px);
+	top: calc(50% - 230px);
 	left: calc(50% - 200px);
 	z-index: 10;
 	width: 400px;
@@ -36,6 +37,7 @@ body {
 	color: white;
 	font-family: 'Coda', cursive;
 	font-size: 3rem;
+	-webkit-box-shadow: 0px 30px 10px -10px rgba(0, 0, 0, 0.4);
 	box-shadow: 0px 30px 10px -10px rgba(0, 0, 0, 0.4);
 	border: 10px solid #920012;
 }
@@ -43,8 +45,14 @@ body {
 .message-form {
 	position: absolute;
 	top: 80%;
-	left: calc(50% - 120px);
+	left: calc(50% - 180px);
+	font-size: 1.25rem;
 }
+
+.message-form__input {
+	font-size: 1.25rem;
+}
+
 .message-form__label {
 	font-weight: 600;
 }
