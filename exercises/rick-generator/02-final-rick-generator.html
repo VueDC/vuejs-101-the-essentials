@@ -12,7 +12,7 @@
 
 <body>
     <div id="app" class="app-wrapper">
-        <div id="image-wrapper" class="image-wrapper" @click="updatePosition" :style="{ backgroundImage: 'url(' + imageUrl + ')' }">
+        <div id="image-wrapper" class="image-wrapper" @click="updatePosition" :style="{ backgroundImage: `url('${imageUrl}')` }">
             <div class="template-wrapper" id="template-wrapper" :style="{ top: y, left: x, width: wrapperWidth }">
                 <div class="speech-bubble">
                     <p>I'm {{ noun }} Rick!</p>
@@ -36,15 +36,13 @@
     <script>
         const app = new Vue({
             el: '#app',
-            data() {
-                return {
-                    noun: 'Pickle',
-                    x: 20 + 'px',
-                    y: 50 + 'px',
-                    showMenu: true,
-                    wrapperWidth: 600 + 'px',
-                    imageUrl: 'https://vignette.wikia.nocookie.net/clubpenguin/images/7/71/Pickle.png/revision/latest?cb=20140205184407'
-                }
+            data: {
+                noun: 'Pickle',
+                x: 20 + 'px',
+                y: 50 + 'px',
+                showMenu: true,
+                wrapperWidth: 600 + 'px',
+                imageUrl: 'https://vignette.wikia.nocookie.net/clubpenguin/images/7/71/Pickle.png/revision/latest?cb=20140205184407'
             },
             methods: {
                 updatePosition(event) {
