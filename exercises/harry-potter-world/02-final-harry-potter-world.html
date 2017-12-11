@@ -42,26 +42,26 @@
                 house: 'Ravenclaw',
                 wand: '12.5" larch wood w/ Dragon heartstring core',
                 wallet: {
-                    galleons: 12,
-                    sickles: 38,
-                    knuts: 274
+                    Galleons: 12,
+                    Sickles: 38,
+                    Knuts: 274
                 },
                 atGringotts: false
             },
             methods: {
                 visitGringotts() {
                     this.atGringotts = true
-                    this.wallet.sickles = 50
-                    this.wallet.knuts = 100
+                    this.wallet.Sickles = 50
+                    this.wallet.Knuts = 100
                 },
                 visitDiagonAlley() {
                     this.atGringotts = false
                 },
                 drinkButterbeer() {
-                    this.wallet.sickles -= 5
+                    this.wallet.Sickles -= 5
                 },
                 eatAtTheLeakyCauldron() {
-                    this.wallet.knuts -= 25
+                    this.wallet.Knuts -= 25
                 }
             }
         })

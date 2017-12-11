@@ -11,6 +11,8 @@
 
 <body>
     <div id="diagon-alley" class="diagon-alley">
+        <!-- Template Instructions -->
+        <!-- 1. Connect all "Static {property}" to their respective data properties (i.e., Static Name => name) -->
         <div class="parchment">
             <h1>Static Name</h1>
             <h2>House:</h2>
@@ -18,11 +20,14 @@
             <h2>Wand:</h2>
             <p>Static Wand</p>
             <h2>Wallet</h2>
+            <!-- 2. Loop through the data property `wallet` to generate the same markup as the flat HTML version -->
             <ul class="wallet">
+                <!-- 3. Dynamically bind a class name that will be idential to the key as your looping through your data -->
                 <li>Galleons: 12</li>
                 <li>Sickles: 38</li>
                 <li>Knuts: 274</li>
             </ul>
+            <!-- 4. Wire up buttons to call their respective methods when clicked on -->
             <div class="parchment__cta">
                 <button>Visit Gringotts</button>
                 <button>Visit Diagon Alley</button>
@@ -34,6 +39,35 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script>
+        const adventure = new Vue({
+            el: "#diagon-alley",
+            data: {
+                name: "Mr. B. Hong",
+                house: "Ravenclaw",
+                wand: '12.5" larch wood w/ Dragon heartstring core',
+                wallet: {
+                    Galleons: 12,
+                    Sickles: 38,
+                    Knuts: 274
+                }
+            },
+            methods: {
+                visitGringotts() {
+                    // This should make `div#gringotts` visible and refill the wallet to have 50 Sickles and 100 Knuts
+                },
+                visitDiagonAlley() {
+                    // This should hide `div#gringotts` so you "return" to Diagon Alley
+                },
+                drinkButterbeer() {
+                    // This should subtract 5 Sickles from your wallet and you should see this reflected on the page whenever you click on it
+                },
+                eatAtTheLeakyCauldron() {
+                    // This should subtract 25 Knuts from your wallet and you should see this reflected on the page whenever you click on it
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
