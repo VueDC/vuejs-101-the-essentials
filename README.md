@@ -8,8 +8,9 @@
 
 ## Resources
 
-* [Vue.js 101 Kit CodePen Collection](https://codepen.io/collection/DmRKRB/)
+* [Recording - 2017.12.06](https://www.youtube.com/watch?v=N5CB0iUuyqo)
 * [Slides - 2017.12.06](https://github.com/VueDC/vuejs-101-the-essentials/blob/master/slides/2017-12-06-vuejs-101-the-essentials.pdf)
+* [Vue.js 101 Kit CodePen Collection](https://codepen.io/collection/DmRKRB/)
 
 ## To Do
 
