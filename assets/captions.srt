@@ -1,0 +1,4752 @@
+1
+00:00:00,000 --> 00:00:04,890
+VueDC is an idea that Ben and I had long running. So my
+
+2
+00:00:03,330 --> 00:00:05,970
+name is Christian Guirreri and I met some 
+
+3
+00:00:04,890 --> 00:00:08,340
+of you as you came in
+
+4
+00:00:05,970 --> 00:00:13,440
+I'm a Senior Front-end Developer here on
+
+5
+00:00:08,340 --> 00:00:17,279
+JavaScript mainly. Ben Hong, Senior UI
+
+6
+00:00:13,440 --> 00:00:18,720
+Engineer, so he's going to be
+
+7
+00:00:17,279 --> 00:00:23,550
+speaking today and he's going to going over
+
+8
+00:00:18,720 --> 00:00:26,640
+a 101 on VueJS. Ben really
+
+9
+00:00:23,550 --> 00:00:29,189
+spearheaded this event, honestly he
+
+10
+00:00:26,640 --> 00:00:30,869
+really made it happen, so looking forward
+
+11
+00:00:29,189 --> 00:00:34,590
+to it and we're just really happy to have so
+
+12
+00:00:30,869 --> 00:00:36,149
+many people here. So why VueDC? We
+
+13
+00:00:34,590 --> 00:00:40,980
+didn't see that anyone else had a 
+
+14
+00:00:36,149 --> 00:00:44,149
+Vue DC specifically and Politico spent
+
+15
+00:00:40,980 --> 00:00:45,899
+a lot of time, probably the past year to
+
+16
+00:00:44,149 --> 00:00:48,239
+looking at different JavaScript
+
+17
+00:00:45,899 --> 00:00:50,430
+frameworks and we've really kind of
+
+18
+00:00:48,239 --> 00:00:51,719
+narrowed down on Vue. We have
+
+19
+00:00:50,430 --> 00:00:54,120
+used a few different ones for a few
+
+20
+00:00:51,719 --> 00:00:57,870
+different products but our best products
+
+21
+00:00:54,120 --> 00:01:00,210
+I think were probably done in Vue. We do a
+
+22
+00:00:57,870 --> 00:01:01,649
+lot of native
+
+23
+00:01:00,210 --> 00:01:04,500
+JavaScript as well like we're trying to
+
+24
+00:01:01,649 --> 00:01:06,840
+trim down as much as possible but Vue
+
+25
+00:01:04,500 --> 00:01:08,610
+has been a really nice framework really
+
+26
+00:01:06,840 --> 00:01:13,170
+nice structure and been really
+
+27
+00:01:08,610 --> 00:01:16,979
+dependable for us. So we've kind of
+
+28
+00:01:13,170 --> 00:01:19,890
+decided to use that in the future. We could
+
+29
+00:01:16,979 --> 00:01:21,450
+easily have a talk I think on 
+
+30
+00:01:19,890 --> 00:01:25,439
+comparing some of the frameworks and why
+
+31
+00:01:21,450 --> 00:01:26,640
+we've chosen Vue. We've kind of started
+
+32
+00:01:25,439 --> 00:01:31,200
+this group just to initiate the
+
+33
+00:01:26,640 --> 00:01:32,670
+discussion, have meetups like this one
+
+34
+00:01:31,200 --> 00:01:35,189
+where it's just you know introductory
+
+35
+00:01:32,670 --> 00:01:38,640
+to get people interested but
+
+36
+00:01:35,189 --> 00:01:46,740
+also more advanced topics obviously are
+
+37
+00:01:38,640 --> 00:01:48,780
+going to be coming. So VueConf, a few
+
+38
+00:01:46,740 --> 00:01:52,110
+announcements, since we should like all
+
+39
+00:01:48,780 --> 00:01:53,909
+meetups, should do the announcements thing,
+
+40
+00:01:52,110 --> 00:01:56,100
+VueConf US is coming up highly recommend
+
+41
+00:01:53,909 --> 00:02:01,100
+going all the famous people are going to
+
+42
+00:01:56,100 --> 00:02:05,159
+be there. [Where is it?] It is in New Orleans in March
+
+43
+00:02:01,100 --> 00:02:09,330
+So there's a workshop day on March
+
+44
+00:02:05,159 --> 00:02:11,350
+26th Monday, and then the conference is
+
+45
+00:02:09,330 --> 00:02:13,870
+Tuesday and Wednesday March 27 to 28.
+
+46
+00:02:11,350 --> 00:02:15,550
+So last year they did the first
+
+47
+00:02:13,870 --> 00:02:18,040
+official Vue conference I don't know
+
+48
+00:02:15,550 --> 00:02:21,300
+what makes it official I guess Evan
+
+49
+00:02:18,040 --> 00:02:23,950
+You is probably involved in that
+
+50
+00:02:21,300 --> 00:02:26,680
+official title but that was in Poland
+
+51
+00:02:23,950 --> 00:02:29,250
+and it's not here but there was a
+
+52
+00:02:26,680 --> 00:02:31,060
+YouTube channel that you can find I
+
+53
+00:02:29,250 --> 00:02:37,630
+there's a YouTube channel that you can
+
+54
+00:02:31,060 --> 00:02:42,670
+find that has all of the all of the
+
+55
+00:02:37,630 --> 00:02:43,900
+talks so we hope to see you there Ben
+
+56
+00:02:42,670 --> 00:02:49,180
+and I will both definitely be there so
+
+57
+00:02:43,900 --> 00:02:52,570
+sign up. So the next meetup is going to be
+
+58
+00:02:49,180 --> 00:02:54,490
+by me it'll be more of 201 it will sort
+
+59
+00:02:52,570 --> 00:02:57,190
+of continue a lot of what Ben is going
+
+60
+00:02:54,490 --> 00:02:58,930
+over today that's kind of how I like to
+
+61
+00:02:57,190 --> 00:03:03,280
+see see things going especially in
+
+62
+00:02:58,930 --> 00:03:05,470
+introductory phases but they're probably
+
+63
+00:03:03,280 --> 00:03:09,310
+fun so we hope you can all come back
+
+64
+00:03:05,470 --> 00:03:13,450
+with that and obviously any interest in
+
+65
+00:03:09,310 --> 00:03:14,530
+speaking come to Ben and me we're
+
+66
+00:03:13,450 --> 00:03:16,270
+definitely interested in hearing your
+
+67
+00:03:14,530 --> 00:03:17,800
+thoughts about any future meetups any
+
+68
+00:03:16,270 --> 00:03:22,690
+future talks stuff that you guys are
+
+69
+00:03:17,800 --> 00:03:24,190
+doing at your companies and if you need
+
+70
+00:03:22,690 --> 00:03:29,600
+any help like crafting a presentation
+
+71
+00:03:24,190 --> 00:03:35,190
+just reach out to us at vuejsdc@gmail.com
+
+72
+00:03:29,600 --> 00:03:39,070
+[Music]
+
+73
+00:03:35,190 --> 00:03:41,260
+We are interested in getting sponsors. We
+
+74
+00:03:39,070 --> 00:03:46,360
+want to make this a pretty big deal in
+
+75
+00:03:41,260 --> 00:03:48,160
+the area so you know you know of anybody
+
+76
+00:03:46,360 --> 00:03:50,950
+who's willing to sponsor either venue or
+
+77
+00:03:48,160 --> 00:03:53,050
+food or anything like that again reach
+
+78
+00:03:50,950 --> 00:04:02,560
+out to Ben or myself
+
+79
+00:03:53,050 --> 00:04:05,350
+but today's gold sponsor is Politico and
+
+80
+00:04:02,560 --> 00:04:05,950
+so I'd like to introduce you to Maria
+
+81
+00:04:05,350 --> 00:04:08,530
+Harrigan
+
+82
+00:04:05,950 --> 00:04:15,750
+she is a Talent Acquisition Manager at
+
+83
+00:04:08,530 --> 00:04:15,750
+Politico. Hi everyone. I'm so excited I get a whole slide
+
+84
+00:04:17,739 --> 00:04:22,539
+I know you didn't come to hear me talk and I don't always sound
+
+85
+00:04:20,049 --> 00:04:24,880
+like this so please bear with me start
+
+86
+00:04:22,539 --> 00:04:30,490
+like hacking up a long but I'm super
+
+87
+00:04:24,880 --> 00:04:31,690
+excited that Politico technology cares
+
+88
+00:04:30,490 --> 00:04:33,630
+so much about technology that they
+
+89
+00:04:31,690 --> 00:04:36,490
+wanted to start their own Meetup and
+
+90
+00:04:33,630 --> 00:04:38,860
+it's really exciting to be a part of it
+
+91
+00:04:36,490 --> 00:04:41,800
+from an HR and talent acquisition
+
+92
+00:04:38,860 --> 00:04:43,630
+standpoint I love being in recruiting
+
+93
+00:04:41,800 --> 00:04:45,310
+and helping with tech recruiting is it I
+
+94
+00:04:43,630 --> 00:04:50,860
+get to live vicariously through you people
+
+95
+00:04:45,310 --> 00:04:52,360
+that do really cool stuff but of course
+
+96
+00:04:50,860 --> 00:04:55,180
+I have to do the shameless plug about
+
+97
+00:04:52,360 --> 00:04:57,940
+Politico and I know a lot of people
+
+98
+00:04:55,180 --> 00:04:59,409
+think they probably hire a lot of
+
+99
+00:04:57,940 --> 00:05:01,210
+journalists or I get like "Oh you work at Politico
+
+100
+00:04:59,409 --> 00:05:03,400
+you must be a reporter and I'm like no
+
+101
+00:05:01,210 --> 00:05:05,470
+I'm in HR but we also have a really
+
+102
+00:05:03,400 --> 00:05:07,990
+awesome technology team and I would love
+
+103
+00:05:05,470 --> 00:05:11,169
+for you guys to think about maybe some
+
+104
+00:05:07,990 --> 00:05:12,340
+career Politico at some point online or
+
+105
+00:05:11,169 --> 00:05:14,800
+even just keeping in touch with me I
+
+106
+00:05:12,340 --> 00:05:16,330
+left out my business cards by the pizza
+
+107
+00:05:14,800 --> 00:05:19,330
+if you want to pick it up connect with
+
+108
+00:05:16,330 --> 00:05:21,550
+me on LinkedIn. You definitely don't have to. The
+
+109
+00:05:19,330 --> 00:05:23,020
+other thing is if you guys are like 
+
+110
+00:05:21,550 --> 00:05:26,889
+putting this stuff on social we'd love
+
+111
+00:05:23,020 --> 00:05:32,560
+for you to tweet at us or tag us on
+
+112
+00:05:26,889 --> 00:05:36,539
+social @politicocareers 
+
+113
+00:05:32,560 --> 00:05:36,539
+So with that said it's all I got
+
+114
+00:05:38,480 --> 00:05:42,340
+[Music]
+
+115
+00:05:41,009 --> 00:05:44,229
+all right
+
+116
+00:05:42,340 --> 00:05:46,509
+so as Chris mentioned my name is Ben
+
+117
+00:05:44,229 --> 00:05:49,270
+Hong and so today we are here to talk
+
+118
+00:05:46,509 --> 00:05:52,030
+about vue.js 101 for those of you that
+
+119
+00:05:49,270 --> 00:05:54,099
+have your laptop's out if you follow
+
+120
+00:05:52,030 --> 00:05:55,479
+this URL you will get actually like live
+
+121
+00:05:54,099 --> 00:05:57,759
+updates of the slides as I go through
+
+122
+00:05:55,479 --> 00:06:00,960
+them so that all helped you guys follow
+
+123
+00:05:57,759 --> 00:06:03,789
+through with that said let's get started
+
+124
+00:06:00,960 --> 00:06:06,219
+so the first question obviously is what
+
+125
+00:06:03,789 --> 00:06:08,110
+is view Jas and you know the short and
+
+126
+00:06:06,219 --> 00:06:09,789
+simple answer is that it's another
+
+127
+00:06:08,110 --> 00:06:11,830
+client-side framework in sort of the
+
+128
+00:06:09,789 --> 00:06:15,099
+massive ecosystem that we already have
+
+129
+00:06:11,830 --> 00:06:16,090
+but it's it's special and so in order to
+
+130
+00:06:15,099 --> 00:06:18,300
+give a little context with that we're
+
+131
+00:06:16,090 --> 00:06:20,409
+gonna kind of step back a little bit and
+
+132
+00:06:18,300 --> 00:06:21,909
+when client-side framework were starting
+
+133
+00:06:20,409 --> 00:06:23,050
+to get really popular this is around
+
+134
+00:06:21,909 --> 00:06:25,180
+time I started getting back into
+
+135
+00:06:23,050 --> 00:06:28,029
+front-end development there was a sort
+
+136
+00:06:25,180 --> 00:06:30,699
+of issue of like there are so many to
+
+137
+00:06:28,029 --> 00:06:31,630
+choose from that before you knew it you
+
+138
+00:06:30,699 --> 00:06:33,310
+know
+
+139
+00:06:31,630 --> 00:06:35,200
+they were sort of running jokes already
+
+140
+00:06:33,310 --> 00:06:37,990
+about how often we were coming out with
+
+141
+00:06:35,200 --> 00:06:41,890
+new tools or frameworks for JavaScript
+
+142
+00:06:37,990 --> 00:06:44,530
+and it kind of became a bear but even in
+
+143
+00:06:41,890 --> 00:06:47,350
+this sort of massive ecosystem this guy
+
+144
+00:06:44,530 --> 00:06:49,090
+named Avenue decides you know he is
+
+145
+00:06:47,350 --> 00:06:50,710
+gonna build its own as well so he
+
+146
+00:06:49,090 --> 00:06:52,810
+originally worked at Google creative
+
+147
+00:06:50,710 --> 00:06:55,810
+labs and so had some work working with
+
+148
+00:06:52,810 --> 00:06:57,760
+meteor working with angular as well and
+
+149
+00:06:55,810 --> 00:06:59,980
+then after angular one in particular and
+
+150
+00:06:57,760 --> 00:07:01,330
+after working with it for a while he he
+
+151
+00:06:59,980 --> 00:07:05,440
+felt like you know what I can build
+
+152
+00:07:01,330 --> 00:07:07,630
+something better like most of our and so
+
+153
+00:07:05,440 --> 00:07:10,360
+his brainchild is Vijay s all by his
+
+154
+00:07:07,630 --> 00:07:12,790
+little lonesome and so there's this
+
+155
+00:07:10,360 --> 00:07:14,170
+popular xkcd comic you know with the
+
+156
+00:07:12,790 --> 00:07:15,550
+fact that every time there's a problem
+
+157
+00:07:14,170 --> 00:07:17,980
+instead of trying to fix the original
+
+158
+00:07:15,550 --> 00:07:20,950
+one we come up with some new new
+
+159
+00:07:17,980 --> 00:07:22,060
+solution for it but the UJS is special
+
+160
+00:07:20,950 --> 00:07:24,280
+in this regard and I would say that its
+
+161
+00:07:22,060 --> 00:07:26,380
+exception to this and so obviously the
+
+162
+00:07:24,280 --> 00:07:29,650
+question is what makes it so special
+
+163
+00:07:26,380 --> 00:07:31,480
+and so let by to illustrate this we're
+
+164
+00:07:29,650 --> 00:07:33,760
+gonna compare it to so the two behemoths
+
+165
+00:07:31,480 --> 00:07:35,740
+in the client side favorite industry so
+
+166
+00:07:33,760 --> 00:07:37,240
+we have angular particularly we talk
+
+167
+00:07:35,740 --> 00:07:38,980
+about angular 1 just because that's
+
+168
+00:07:37,240 --> 00:07:40,060
+around the time that view came out so
+
+169
+00:07:38,980 --> 00:07:41,710
+obviously developed and maintained by
+
+170
+00:07:40,060 --> 00:07:43,210
+Google it was really easy to get
+
+171
+00:07:41,710 --> 00:07:45,490
+something prototype up and running
+
+172
+00:07:43,210 --> 00:07:47,140
+really quickly however the problem was
+
+173
+00:07:45,490 --> 00:07:49,540
+that a lot of it was like a mat there
+
+174
+00:07:47,140 --> 00:07:50,950
+was a lot of magical angular syntax so
+
+175
+00:07:49,540 --> 00:07:52,900
+when it came to actually debugging what
+
+176
+00:07:50,950 --> 00:07:54,430
+was going on you it was a pretty high
+
+177
+00:07:52,900 --> 00:07:56,730
+learning curve just to kind of get into
+
+178
+00:07:54,430 --> 00:07:58,570
+the weeds of what was going on
+
+179
+00:07:56,730 --> 00:08:00,640
+performance wasn't the best with angular
+
+180
+00:07:58,570 --> 00:08:02,050
+one at the time as well and it was
+
+181
+00:08:00,640 --> 00:08:03,130
+really opinionated on how you should
+
+182
+00:08:02,050 --> 00:08:04,360
+build your app and that's not
+
+183
+00:08:03,130 --> 00:08:06,820
+necessarily a bad thing even though I
+
+184
+00:08:04,360 --> 00:08:08,950
+put it as a con however it does restrict
+
+185
+00:08:06,820 --> 00:08:11,110
+teams as far as like opting out or
+
+186
+00:08:08,950 --> 00:08:12,430
+opting into certain technologies and so
+
+187
+00:08:11,110 --> 00:08:16,050
+it's just something that angular had
+
+188
+00:08:12,430 --> 00:08:20,050
+that others didn't
+
+189
+00:08:16,050 --> 00:08:21,970
+as far as react goes so as he developed
+
+190
+00:08:20,050 --> 00:08:24,130
+by Facebook and was recently granted the
+
+191
+00:08:21,970 --> 00:08:26,890
+MIT license which was a big win for the
+
+192
+00:08:24,130 --> 00:08:29,170
+open-source community and it had great
+
+193
+00:08:26,890 --> 00:08:31,180
+performance due to the proliferation of
+
+194
+00:08:29,170 --> 00:08:33,820
+the virtual Dom and so now most people
+
+195
+00:08:31,180 --> 00:08:35,919
+nowadays know what that is because of
+
+196
+00:08:33,820 --> 00:08:37,510
+react and the other thing I liked a lot
+
+197
+00:08:35,919 --> 00:08:39,610
+about react is that you got a lot better
+
+198
+00:08:37,510 --> 00:08:42,040
+at vanilla JavaScript really quickly
+
+199
+00:08:39,610 --> 00:08:43,750
+because unlike angular which provides
+
+200
+00:08:42,040 --> 00:08:45,430
+you a lot of sort of magical commands to
+
+201
+00:08:43,750 --> 00:08:46,750
+do things you had to write everything
+
+202
+00:08:45,430 --> 00:08:49,330
+well you have to write a lot of things
+
+203
+00:08:46,750 --> 00:08:51,760
+from scratch when it came to react on
+
+204
+00:08:49,330 --> 00:08:52,870
+the other hand the downside to this is
+
+205
+00:08:51,760 --> 00:08:54,250
+that there was a really high learning
+
+206
+00:08:52,870 --> 00:08:55,930
+curve as far as getting started if you
+
+207
+00:08:54,250 --> 00:08:58,450
+were not a JavaScript developer to start
+
+208
+00:08:55,930 --> 00:08:59,890
+it could it was a lot to deal with as
+
+209
+00:08:58,450 --> 00:09:01,120
+far as like oh used to configure web
+
+210
+00:08:59,890 --> 00:09:04,390
+pack and then have to do this bundler
+
+211
+00:09:01,120 --> 00:09:07,210
+and then you know it so yeah that was
+
+212
+00:09:04,390 --> 00:09:08,680
+kind of a rough start with react and as
+
+213
+00:09:07,210 --> 00:09:10,510
+well as a result this is really
+
+214
+00:09:08,680 --> 00:09:11,800
+unfriendly to non JavaScript developers
+
+215
+00:09:10,510 --> 00:09:12,970
+especially if people come to like the
+
+216
+00:09:11,800 --> 00:09:14,380
+design world where their HTML CSS
+
+217
+00:09:12,970 --> 00:09:16,660
+specialist and they want to kind of come
+
+218
+00:09:14,380 --> 00:09:18,790
+in and help out with the default
+
+219
+00:09:16,660 --> 00:09:21,580
+template language of JSX is just you
+
+220
+00:09:18,790 --> 00:09:23,740
+can't just you know post paste regular
+
+221
+00:09:21,580 --> 00:09:28,140
+markup into it you have to like convert
+
+222
+00:09:23,740 --> 00:09:30,070
+it into JavaScript friendly syntax and
+
+223
+00:09:28,140 --> 00:09:31,390
+you know the other thing especially in
+
+224
+00:09:30,070 --> 00:09:33,790
+this earlier days because there was such
+
+225
+00:09:31,390 --> 00:09:34,990
+a high pace of development you never
+
+226
+00:09:33,790 --> 00:09:36,520
+knew when you upgraded your react
+
+227
+00:09:34,990 --> 00:09:37,780
+whether or not certain dependencies or
+
+228
+00:09:36,520 --> 00:09:40,420
+libraries were going to break as a
+
+229
+00:09:37,780 --> 00:09:42,010
+result so this you know sort of like one
+
+230
+00:09:40,420 --> 00:09:43,480
+of the things I was a cautionary tale as
+
+231
+00:09:42,010 --> 00:09:47,320
+far as like when using an upgrading
+
+232
+00:09:43,480 --> 00:09:49,390
+react now view on the other hand it has
+
+233
+00:09:47,320 --> 00:09:52,960
+no corporate influence and clearly open
+
+234
+00:09:49,390 --> 00:09:56,080
+source so the the reason this is a pro
+
+235
+00:09:52,960 --> 00:09:57,640
+is because unlike Facebook they had the
+
+236
+00:09:56,080 --> 00:09:59,470
+parse developer platform at one point
+
+237
+00:09:57,640 --> 00:10:01,270
+and one day they decide to just close it
+
+238
+00:09:59,470 --> 00:10:03,430
+down and that that hurt a lot of
+
+239
+00:10:01,270 --> 00:10:04,780
+different people whereas so with view we
+
+240
+00:10:03,430 --> 00:10:05,740
+know there's open source and that we
+
+241
+00:10:04,780 --> 00:10:07,600
+don't have to worry about a company
+
+242
+00:10:05,740 --> 00:10:09,400
+deciding because it's in its best own
+
+243
+00:10:07,600 --> 00:10:11,260
+best interest that they're going to like
+
+244
+00:10:09,400 --> 00:10:13,930
+shut it down so that's a nice pro about
+
+245
+00:10:11,260 --> 00:10:15,580
+it after working I've worked a lot with
+
+246
+00:10:13,930 --> 00:10:17,320
+it react a little bit with angular and
+
+247
+00:10:15,580 --> 00:10:19,090
+as far as I can tell it really does take
+
+248
+00:10:17,320 --> 00:10:23,470
+the best of both worlds and brings them
+
+249
+00:10:19,090 --> 00:10:24,700
+together and a huge Pro because you know
+
+250
+00:10:23,470 --> 00:10:26,560
+we have developers on our team that
+
+251
+00:10:24,700 --> 00:10:27,850
+again are not JavaScript experts and in
+
+252
+00:10:26,560 --> 00:10:29,620
+fact tried to touch it as little as
+
+253
+00:10:27,850 --> 00:10:31,840
+possible so the fact that it doesn't a
+
+254
+00:10:29,620 --> 00:10:33,940
+liate non JavaScript developers is a
+
+255
+00:10:31,840 --> 00:10:36,880
+huge plus for us as well as you would
+
+256
+00:10:33,940 --> 00:10:38,260
+I'll show you shortly and as far as
+
+257
+00:10:36,880 --> 00:10:40,600
+performance goes it's pretty much on par
+
+258
+00:10:38,260 --> 00:10:44,020
+if not better than react as some tests
+
+259
+00:10:40,600 --> 00:10:46,210
+have shown and almost most importantly
+
+260
+00:10:44,020 --> 00:10:48,100
+it's very flexible in accommodating how
+
+261
+00:10:46,210 --> 00:10:50,470
+you prefer to build your apps so for
+
+262
+00:10:48,100 --> 00:10:52,540
+example with you know angular IO types
+
+263
+00:10:50,470 --> 00:10:54,370
+of it is pretty much mandatory well view
+
+264
+00:10:52,540 --> 00:10:55,960
+doesn't force you to do that but if you
+
+265
+00:10:54,370 --> 00:10:57,940
+want to opt in there is official support
+
+266
+00:10:55,960 --> 00:10:58,960
+for typescript and you have those
+
+267
+00:10:57,940 --> 00:11:01,290
+options to pick
+
+268
+00:10:58,960 --> 00:11:03,820
+as you're going through your view app
+
+269
+00:11:01,290 --> 00:11:05,380
+and then of course we got to find a con
+
+270
+00:11:03,820 --> 00:11:07,000
+somewhere and so it does have a small
+
+271
+00:11:05,380 --> 00:11:09,430
+core team in comparison in a smaller
+
+272
+00:11:07,000 --> 00:11:11,050
+community however as far as the pace of
+
+273
+00:11:09,430 --> 00:11:13,330
+development I've seen them sort of build
+
+274
+00:11:11,050 --> 00:11:17,230
+all the core modules and libraries at a
+
+275
+00:11:13,330 --> 00:11:19,870
+pretty great pace so with that said I'm
+
+276
+00:11:17,230 --> 00:11:21,220
+sure of you're like you know as a saying
+
+277
+00:11:19,870 --> 00:11:24,460
+goes show me don't tell me
+
+278
+00:11:21,220 --> 00:11:28,030
+so let's go ahead and jump right into
+
+279
+00:11:24,460 --> 00:11:32,620
+the essentials of view so I'm going to
+
+280
+00:11:28,030 --> 00:11:34,870
+open this code pen right here and okay
+
+281
+00:11:32,620 --> 00:11:38,470
+so actually you know what I'm gonna use
+
+282
+00:11:34,870 --> 00:11:43,030
+this one instead so as you can see here
+
+283
+00:11:38,470 --> 00:11:47,200
+we have a flat HTML file this nothing
+
+284
+00:11:43,030 --> 00:11:49,300
+fancy about it right here you can see
+
+285
+00:11:47,200 --> 00:11:51,430
+I've had a basic just view app
+
+286
+00:11:49,300 --> 00:11:53,080
+configuration so normally when it has
+
+287
+00:11:51,430 --> 00:11:54,700
+like reacting angular nowadays most
+
+288
+00:11:53,080 --> 00:11:55,840
+people are used to this process where
+
+289
+00:11:54,700 --> 00:11:57,850
+you have to install the command line
+
+290
+00:11:55,840 --> 00:12:00,190
+tool and then you have to run web pack
+
+291
+00:11:57,850 --> 00:12:01,840
+and everything well as the slide and
+
+292
+00:12:00,190 --> 00:12:04,660
+sort of as I mentioned it's really as
+
+293
+00:12:01,840 --> 00:12:07,720
+easy as including jQuery so we're gonna
+
+294
+00:12:04,660 --> 00:12:10,060
+go ahead and copy it and just like you
+
+295
+00:12:07,720 --> 00:12:14,070
+would normally you just you have your
+
+296
+00:12:10,060 --> 00:12:21,250
+script tag and your page or CDN and now
+
+297
+00:12:14,070 --> 00:12:27,850
+once I attach the element hook you can
+
+298
+00:12:21,250 --> 00:12:32,260
+see here now that when I update the HTML
+
+299
+00:12:27,850 --> 00:12:34,450
+syntax does it so in like two lines of
+
+300
+00:12:32,260 --> 00:12:36,280
+code you see here we have a functional
+
+301
+00:12:34,450 --> 00:12:37,780
+view app running on granted you know
+
+302
+00:12:36,280 --> 00:12:39,130
+you'll want to event to get Babel to
+
+303
+00:12:37,780 --> 00:12:40,180
+transpile and everything but as far as
+
+304
+00:12:39,130 --> 00:12:42,700
+like getting something up and running
+
+305
+00:12:40,180 --> 00:12:43,990
+it's it's up and running as you can see
+
+306
+00:12:42,700 --> 00:12:47,200
+here for those aren't familiar with it
+
+307
+00:12:43,990 --> 00:12:48,880
+view does use the much tests in tax kind
+
+308
+00:12:47,200 --> 00:12:51,130
+of out of the box I'm you can certainly
+
+309
+00:12:48,880 --> 00:12:53,260
+change it to other signifiers if you
+
+310
+00:12:51,130 --> 00:12:58,000
+want but as you can see that was pretty
+
+311
+00:12:53,260 --> 00:12:59,500
+simple to do okay so for those of us
+
+312
+00:12:58,000 --> 00:13:02,020
+that aren't as familiar with client-side
+
+313
+00:12:59,500 --> 00:13:03,970
+frameworks so what I did there is let's
+
+314
+00:13:02,020 --> 00:13:05,500
+let's kind of take a step back and break
+
+315
+00:13:03,970 --> 00:13:06,790
+it down so the first thing we do is we
+
+316
+00:13:05,500 --> 00:13:08,650
+initialize an instance right I'm
+
+317
+00:13:06,790 --> 00:13:11,050
+declaring an app variable here and
+
+318
+00:13:08,650 --> 00:13:12,819
+initializing view nothing too special
+
+319
+00:13:11,050 --> 00:13:14,289
+and so we're going to abstract it
+
+320
+00:13:12,819 --> 00:13:15,819
+a little bit out for those that aren't
+
+321
+00:13:14,289 --> 00:13:17,129
+as submitted with JavaScript and we're
+
+322
+00:13:15,819 --> 00:13:20,109
+going to pretend we're planning a trip
+
+323
+00:13:17,129 --> 00:13:21,339
+and so we have this new trip and we're
+
+324
+00:13:20,109 --> 00:13:22,839
+gonna do we're gonna map out all like
+
+325
+00:13:21,339 --> 00:13:24,579
+the important details we want to do on
+
+326
+00:13:22,839 --> 00:13:26,859
+this trip so you know we want to go to
+
+327
+00:13:24,579 --> 00:13:28,569
+you know Diagon Alley and then you know
+
+328
+00:13:26,859 --> 00:13:31,209
+within our luggage we're gonna carry you
+
+329
+00:13:28,569 --> 00:13:32,439
+know these various things and then when
+
+330
+00:13:31,209 --> 00:13:33,789
+it comes of things to do these are the
+
+331
+00:13:32,439 --> 00:13:37,239
+things we want to do when it comes to
+
+332
+00:13:33,789 --> 00:13:40,989
+our trip and so the first thing we have
+
+333
+00:13:37,239 --> 00:13:43,149
+to do with any good configuration is
+
+334
+00:13:40,989 --> 00:13:45,819
+determining as we said the destination
+
+335
+00:13:43,149 --> 00:13:47,559
+and so in your configuration object this
+
+336
+00:13:45,819 --> 00:13:49,720
+is determined by you know Al which
+
+337
+00:13:47,559 --> 00:13:51,729
+stands for element and it takes a CSS
+
+338
+00:13:49,720 --> 00:13:53,859
+selector which we which the best
+
+339
+00:13:51,729 --> 00:13:55,089
+practice is to use an ID so that you
+
+340
+00:13:53,859 --> 00:13:59,470
+only have one instance of your app
+
+341
+00:13:55,089 --> 00:14:01,569
+running on any given page once you do
+
+342
+00:13:59,470 --> 00:14:03,579
+that then your luggage ultimately
+
+343
+00:14:01,569 --> 00:14:04,899
+becomes your is your data object and
+
+344
+00:14:03,579 --> 00:14:08,049
+this is what we're going to reach into
+
+345
+00:14:04,899 --> 00:14:12,789
+to reference as we throughout as we work
+
+346
+00:14:08,049 --> 00:14:14,559
+in our HTML template and as far as our
+
+347
+00:14:12,789 --> 00:14:16,809
+things to do this is ultimately our
+
+348
+00:14:14,559 --> 00:14:19,419
+methods block this is going to sort of
+
+349
+00:14:16,809 --> 00:14:21,699
+have enabled the app to do different
+
+350
+00:14:19,419 --> 00:14:26,350
+things according to what we want as we
+
+351
+00:14:21,699 --> 00:14:32,759
+define them so instead of so let's let's
+
+352
+00:14:26,350 --> 00:14:35,970
+take a look at this in action all right
+
+353
+00:14:32,759 --> 00:14:39,249
+so as you can see here once again I have
+
+354
+00:14:35,970 --> 00:14:41,739
+very simple you know again just straight
+
+355
+00:14:39,249 --> 00:14:44,309
+HTML nothing special about this and I've
+
+356
+00:14:41,739 --> 00:14:47,049
+already included the script here and
+
+357
+00:14:44,309 --> 00:14:49,569
+I've copied over the code that we had in
+
+358
+00:14:47,049 --> 00:14:51,129
+the slide example and so let's go ahead
+
+359
+00:14:49,569 --> 00:14:53,769
+and start wiring some of the stuff up so
+
+360
+00:14:51,129 --> 00:14:58,449
+is see so we have our static name
+
+361
+00:14:53,769 --> 00:15:00,879
+so again just using much testing tax
+
+362
+00:14:58,449 --> 00:15:03,850
+okay so something's not working right
+
+363
+00:15:00,879 --> 00:15:05,439
+and so what's going on 99% of the time
+
+364
+00:15:03,850 --> 00:15:07,029
+it's because you forgot to attach your
+
+365
+00:15:05,439 --> 00:15:08,949
+app which is what I didn't do as you can
+
+366
+00:15:07,029 --> 00:15:10,479
+see here the element is diagonally and
+
+367
+00:15:08,949 --> 00:15:15,720
+we don't have an element on here that
+
+368
+00:15:10,479 --> 00:15:18,999
+has that so once I attach that on
+
+369
+00:15:15,720 --> 00:15:20,649
+voila now you have your data running so
+
+370
+00:15:18,999 --> 00:15:25,439
+I'm gonna go ahead and let's go ahead
+
+371
+00:15:20,649 --> 00:15:25,439
+and swap in the mess with data here
+
+372
+00:15:30,740 --> 00:15:42,290
+all right great and then I'm gonna go
+
+373
+00:15:34,079 --> 00:15:47,310
+ahead and fill these yep let me go back
+
+374
+00:15:42,290 --> 00:15:58,970
+so it slides calm slash Ben codes n /
+
+375
+00:15:47,310 --> 00:16:04,639
+UJS 101 the essentials / live good okay
+
+376
+00:15:58,970 --> 00:16:06,839
+jump back alright okay you're welcome
+
+377
+00:16:04,639 --> 00:16:09,060
+so as we can see here I'm going to go
+
+378
+00:16:06,839 --> 00:16:12,350
+ahead and wire up a couple more things
+
+379
+00:16:09,060 --> 00:16:23,370
+so we have our wallet here and we'll
+
+380
+00:16:12,350 --> 00:16:27,029
+reference this alright so as you can see
+
+381
+00:16:23,370 --> 00:16:29,579
+here we have hooked up our basic Harry
+
+382
+00:16:27,029 --> 00:16:35,760
+Potter world app with the data model
+
+383
+00:16:29,579 --> 00:16:37,410
+here with you alright so before we can
+
+384
+00:16:35,760 --> 00:16:38,820
+move on to the next stuff that was more
+
+385
+00:16:37,410 --> 00:16:42,360
+interesting we need to talk about
+
+386
+00:16:38,820 --> 00:16:44,850
+directives and so directives are the one
+
+387
+00:16:42,360 --> 00:16:46,320
+part of you that is kind of magical and
+
+388
+00:16:44,850 --> 00:16:48,600
+for those of you the bots and angular
+
+389
+00:16:46,320 --> 00:16:49,290
+it's gonna be you guys don't know what
+
+390
+00:16:48,600 --> 00:16:51,630
+I'm talking about
+
+391
+00:16:49,290 --> 00:16:53,370
+ultimately what they are are view
+
+392
+00:16:51,630 --> 00:16:55,470
+specific methods that allow you to a
+
+393
+00:16:53,370 --> 00:16:56,730
+comment accomplish common goals that
+
+394
+00:16:55,470 --> 00:16:58,920
+abstract away sort of the implementation
+
+395
+00:16:56,730 --> 00:17:01,260
+piece and so here you have a list of
+
+396
+00:16:58,920 --> 00:17:03,690
+like sort of common directives that we
+
+397
+00:17:01,260 --> 00:17:04,890
+have in view the most popular ones and
+
+398
+00:17:03,690 --> 00:17:07,709
+the ones we're going to cover are the
+
+399
+00:17:04,890 --> 00:17:09,030
+ones on the left hand side and so as you
+
+400
+00:17:07,709 --> 00:17:10,709
+can see they're all prefixed with the V
+
+401
+00:17:09,030 --> 00:17:12,839
+dash in order to ensure that it doesn't
+
+402
+00:17:10,709 --> 00:17:17,010
+collide with anything else in your
+
+403
+00:17:12,839 --> 00:17:20,100
+application so starting with the V
+
+404
+00:17:17,010 --> 00:17:21,900
+if-else elsif and V show they these are
+
+405
+00:17:20,100 --> 00:17:24,390
+directives that ultimately toggle the
+
+406
+00:17:21,900 --> 00:17:27,150
+visibility of your elements but there is
+
+407
+00:17:24,390 --> 00:17:30,150
+one key distinction between them the V
+
+408
+00:17:27,150 --> 00:17:33,540
+if and the VLC if they actually destroy
+
+409
+00:17:30,150 --> 00:17:34,860
+the element on the page and like they
+
+410
+00:17:33,540 --> 00:17:36,960
+made sure all the event handlers and
+
+411
+00:17:34,860 --> 00:17:39,060
+everything are eliminated whereas V show
+
+412
+00:17:36,960 --> 00:17:42,900
+is really just a CSS toggle
+
+413
+00:17:39,060 --> 00:17:45,330
+and so to show you that real quick we
+
+414
+00:17:42,900 --> 00:17:47,580
+have our little parchment here so I'm
+
+415
+00:17:45,330 --> 00:17:50,940
+gonna go ahead and actually make you up
+
+416
+00:17:47,580 --> 00:17:58,080
+an element inspector all right so here
+
+417
+00:17:50,940 --> 00:18:01,580
+is our parchment right here and then so
+
+418
+00:17:58,080 --> 00:18:04,740
+if I do V V if and I just declare false
+
+419
+00:18:01,580 --> 00:18:08,460
+you will see that the element is
+
+420
+00:18:04,740 --> 00:18:10,380
+completely gone from there it's nowhere
+
+421
+00:18:08,460 --> 00:18:12,240
+to be found it's actually destroyed Dom
+
+422
+00:18:10,380 --> 00:18:14,100
+element and thus nowhere is not the
+
+423
+00:18:12,240 --> 00:18:17,250
+you're not able to reference it on the
+
+424
+00:18:14,100 --> 00:18:25,550
+other hand if you use the v-- show false
+
+425
+00:18:17,250 --> 00:18:25,550
+you'll notice that the truthers
+
+426
+00:18:31,489 --> 00:18:38,700
+and you do the false it actually just
+
+427
+00:18:34,169 --> 00:18:45,239
+uses a CSS to toggle the hiding it so
+
+428
+00:18:38,700 --> 00:18:49,110
+actually let me switch as you can see
+
+429
+00:18:45,239 --> 00:18:50,580
+here style display:none and then again
+
+430
+00:18:49,110 --> 00:18:51,899
+just actually I realize those in another
+
+431
+00:18:50,580 --> 00:18:57,840
+iframe when I just showed you this
+
+432
+00:18:51,899 --> 00:19:03,059
+earlier so V else on the other the if on
+
+433
+00:18:57,840 --> 00:19:04,470
+the other hand it's completely gone and
+
+434
+00:19:03,059 --> 00:19:06,389
+so those are the main differences
+
+435
+00:19:04,470 --> 00:19:08,190
+between them usually if you're gonna
+
+436
+00:19:06,389 --> 00:19:10,019
+toggle frequently as far as like
+
+437
+00:19:08,190 --> 00:19:12,330
+visibility goes then you're gonna want
+
+438
+00:19:10,019 --> 00:19:13,379
+me show otherwise V if is the most
+
+439
+00:19:12,330 --> 00:19:15,059
+common one you're gonna be using for
+
+440
+00:19:13,379 --> 00:19:20,970
+kind of removing and adding elements
+
+441
+00:19:15,059 --> 00:19:23,429
+back into the Dom there is this tweet I
+
+442
+00:19:20,970 --> 00:19:26,129
+saw by Sam who works at Google and it
+
+443
+00:19:23,429 --> 00:19:27,869
+says a 97% or 99% of software
+
+444
+00:19:26,129 --> 00:19:30,029
+development in one requirement is that a
+
+445
+00:19:27,869 --> 00:19:33,960
+user should be able to view view a list
+
+446
+00:19:30,029 --> 00:19:37,019
+of items and so luckily view has a
+
+447
+00:19:33,960 --> 00:19:38,340
+directive for that and that is v4 and as
+
+448
+00:19:37,019 --> 00:19:40,830
+you can see here in this simple example
+
+449
+00:19:38,340 --> 00:19:43,679
+it takes what you would normally have to
+
+450
+00:19:40,830 --> 00:19:47,009
+very tediously like right out by hand if
+
+451
+00:19:43,679 --> 00:19:49,889
+you were sort of doing this right here
+
+452
+00:19:47,009 --> 00:19:54,809
+and it just condenses it all down into
+
+453
+00:19:49,889 --> 00:19:56,669
+one simple block and so like like we do
+
+454
+00:19:54,809 --> 00:19:58,739
+before let's go and show you the live
+
+455
+00:19:56,669 --> 00:20:03,590
+example with this one right here so let
+
+456
+00:19:58,739 --> 00:20:03,590
+me go ahead yeah sure
+
+457
+00:20:12,500 --> 00:20:17,270
+so in the instance of let's say you have
+
+458
+00:20:14,990 --> 00:20:19,940
+I don't know three different banners and
+
+459
+00:20:17,270 --> 00:20:21,620
+you want the first one to show up in the
+
+460
+00:20:19,940 --> 00:20:24,230
+event you have an error but you want a
+
+461
+00:20:21,620 --> 00:20:26,330
+default banner to show otherwise so that
+
+462
+00:20:24,230 --> 00:20:27,890
+could be a simple exempt us off the top
+
+463
+00:20:26,330 --> 00:20:29,179
+of my head they send you just you have a
+
+464
+00:20:27,890 --> 00:20:31,130
+default element that you would normally
+
+465
+00:20:29,179 --> 00:20:37,429
+show and then you have condition to
+
+466
+00:20:31,130 --> 00:20:40,370
+toggle it depending on yes that's right
+
+467
+00:20:37,429 --> 00:20:42,770
+so right so you would have your if
+
+468
+00:20:40,370 --> 00:20:45,460
+statement as we had before so let me go
+
+469
+00:20:42,770 --> 00:20:47,809
+ahead let me see if I can do this live
+
+470
+00:20:45,460 --> 00:21:11,350
+all right so in this case we have this
+
+471
+00:20:47,809 --> 00:21:14,059
+parchment true and okay here this okay
+
+472
+00:21:11,350 --> 00:21:16,130
+so as you can see here I have two Dom
+
+473
+00:21:14,059 --> 00:21:30,010
+elements here and me condense this down
+
+474
+00:21:16,130 --> 00:21:33,049
+did it too much sorry hang on a sec okay
+
+475
+00:21:30,010 --> 00:21:34,760
+so I have two Dom elements here we have
+
+476
+00:21:33,049 --> 00:21:37,039
+our V if true show this parchment
+
+477
+00:21:34,760 --> 00:21:40,130
+otherwise show the other parchment so
+
+478
+00:21:37,039 --> 00:21:42,860
+now if I toggle this to false there it
+
+479
+00:21:40,130 --> 00:21:44,630
+is it's not styled properly but you can
+
+480
+00:21:42,860 --> 00:21:46,159
+see it right here so that's essentially
+
+481
+00:21:44,630 --> 00:21:47,690
+what's going on and then you can have V
+
+482
+00:21:46,159 --> 00:21:50,720
+else--if to show again additional
+
+483
+00:21:47,690 --> 00:21:54,980
+conditions just like to continue that
+
+484
+00:21:50,720 --> 00:21:59,150
+chain of logic if you'd like yes so in
+
+485
+00:21:54,980 --> 00:22:02,840
+this case yeah so like again this is uh
+
+486
+00:21:59,150 --> 00:22:07,090
+I don't know let's see uh wallet
+
+487
+00:22:02,840 --> 00:22:07,090
+galleons is greater than 20
+
+488
+00:22:17,090 --> 00:22:24,450
+okay so in this case wallet galleons is
+
+489
+00:22:20,940 --> 00:22:27,870
+not 20 because I set it at 12 so I'm
+
+490
+00:22:24,450 --> 00:22:30,600
+gonna treat that so now you can see now
+
+491
+00:22:27,870 --> 00:22:37,920
+you have here let me get this color
+
+492
+00:22:30,600 --> 00:22:40,380
+white so that is there you go so you can
+
+493
+00:22:37,920 --> 00:22:41,970
+see here it went through the first vfvf
+
+494
+00:22:40,380 --> 00:22:43,770
+condition which I declared a false
+
+495
+00:22:41,970 --> 00:22:45,540
+immediately then went to check the
+
+496
+00:22:43,770 --> 00:22:47,280
+second one to make sure if the Y
+
+497
+00:22:45,540 --> 00:22:49,170
+galleons was greater and since it was
+
+498
+00:22:47,280 --> 00:22:52,170
+then it showed this and then in the
+
+499
+00:22:49,170 --> 00:22:58,500
+event it's not then it will run all the
+
+500
+00:22:52,170 --> 00:22:59,880
+way down to the final one yeah ideally
+
+501
+00:22:58,500 --> 00:23:02,070
+you want your Fiat to be the first one
+
+502
+00:22:59,880 --> 00:23:06,150
+and then else it's all in the middle and
+
+503
+00:23:02,070 --> 00:23:08,460
+then your else at the very bottom it is
+
+504
+00:23:06,150 --> 00:23:09,840
+really sort of like for legibility it
+
+505
+00:23:08,460 --> 00:23:12,530
+helps to kind of keep it in that order
+
+506
+00:23:09,840 --> 00:23:12,530
+yeah
+
+507
+00:23:17,240 --> 00:23:38,050
+I believe it will break we can test it
+
+508
+00:23:27,680 --> 00:23:38,050
+right yeah yeah I don't think it'll run
+
+509
+00:23:39,160 --> 00:23:44,030
+yeah it looks like it does have to be in
+
+510
+00:23:41,660 --> 00:23:46,970
+a specific order yep
+
+511
+00:23:44,030 --> 00:23:48,410
+any other questions sorry yeah always
+
+512
+00:23:46,970 --> 00:23:49,970
+feel free to flag me in case you have a
+
+513
+00:23:48,410 --> 00:23:55,520
+question I'd get little heads down
+
+514
+00:23:49,970 --> 00:23:57,980
+sometimes okay so let's go back right we
+
+515
+00:23:55,520 --> 00:24:00,650
+were talking about the V for loop so
+
+516
+00:23:57,980 --> 00:24:02,630
+here we have sort of our galleons and so
+
+517
+00:24:00,650 --> 00:24:05,920
+earlier you saw that what I did was I
+
+518
+00:24:02,630 --> 00:24:09,350
+manually went in there to change the
+
+519
+00:24:05,920 --> 00:24:11,420
+lists itself and again for like three
+
+520
+00:24:09,350 --> 00:24:12,620
+items it's kind of not a big deal but in
+
+521
+00:24:11,420 --> 00:24:15,890
+the event this was you know again like a
+
+522
+00:24:12,620 --> 00:24:17,480
+list of 100 items this would get pretty
+
+523
+00:24:15,890 --> 00:24:21,800
+unbearable pretty quickly so let's go
+
+524
+00:24:17,480 --> 00:24:24,080
+ahead and refactor this using the v4 so
+
+525
+00:24:21,800 --> 00:24:25,850
+essentially you put your v4 on the HTML
+
+526
+00:24:24,080 --> 00:24:28,430
+element that you actually want to repeat
+
+527
+00:24:25,850 --> 00:24:33,080
+so we're gonna v4 and we're gonna
+
+528
+00:24:28,430 --> 00:24:36,350
+declare we want the okay so I have an
+
+529
+00:24:33,080 --> 00:24:38,540
+object so the syntax here is we have the
+
+530
+00:24:36,350 --> 00:24:43,340
+amount so you have your value and your
+
+531
+00:24:38,540 --> 00:24:45,200
+key which is the label and in wallet so
+
+532
+00:24:43,340 --> 00:24:48,770
+I'll explain this real quick what I'm
+
+533
+00:24:45,200 --> 00:24:51,620
+doing in a second okay so as you can see
+
+534
+00:24:48,770 --> 00:24:53,480
+here in my data object I have this
+
+535
+00:24:51,620 --> 00:24:56,180
+wallet object here and so what I'm
+
+536
+00:24:53,480 --> 00:24:58,910
+telling you to do is let me just put
+
+537
+00:24:56,180 --> 00:25:00,860
+numbers here is I'm telling for for
+
+538
+00:24:58,910 --> 00:25:04,880
+every item in wallet I want you to go
+
+539
+00:25:00,860 --> 00:25:12,860
+ahead and output these labels so again
+
+540
+00:25:04,880 --> 00:25:17,510
+we're gonna use the the mustache syntax
+
+541
+00:25:12,860 --> 00:25:20,840
+and that's it now you've sort of
+
+542
+00:25:17,510 --> 00:25:22,400
+eliminated all that redundancy and very
+
+543
+00:25:20,840 --> 00:25:24,940
+clean very semantic and you know what's
+
+544
+00:25:22,400 --> 00:25:24,940
+going on yeah
+
+545
+00:25:30,780 --> 00:25:38,950
+yep yeah so there are so those are one
+
+546
+00:25:37,000 --> 00:25:40,540
+of the advanced hop was you can have add
+
+547
+00:25:38,950 --> 00:25:42,630
+filters like custom filters for like
+
+548
+00:25:40,540 --> 00:25:47,980
+highlighting title casing you could also
+
+549
+00:25:42,630 --> 00:25:50,170
+this is so I wonder between the
+
+550
+00:25:47,980 --> 00:25:52,150
+handlebar syntax it it should be
+
+551
+00:25:50,170 --> 00:25:53,590
+actually rendering the actual inline
+
+552
+00:25:52,150 --> 00:25:54,970
+JavaScript so you could write inline
+
+553
+00:25:53,590 --> 00:25:57,220
+JavaScript in there if you wanted to to
+
+554
+00:25:54,970 --> 00:26:03,450
+like do that but obviously there are
+
+555
+00:25:57,220 --> 00:26:03,450
+cleaner ways of doing that in view okay
+
+556
+00:26:04,800 --> 00:26:09,580
+computer methods is different from data
+
+557
+00:26:07,780 --> 00:26:11,620
+yeah that's something that we will get
+
+558
+00:26:09,580 --> 00:26:13,600
+to in like the 201 but that's how to do
+
+559
+00:26:11,620 --> 00:26:15,820
+is sort of how data is being updated as
+
+560
+00:26:13,600 --> 00:26:19,120
+like the most of the life cycle
+
+561
+00:26:15,820 --> 00:26:21,310
+yeah but filters are just again in her
+
+562
+00:26:19,120 --> 00:26:23,530
+case you would do something like title
+
+563
+00:26:21,310 --> 00:26:25,330
+case and so label would pass through
+
+564
+00:26:23,530 --> 00:26:26,740
+this this filter that I'd build called
+
+565
+00:26:25,330 --> 00:26:28,750
+title case it would take the string and
+
+566
+00:26:26,740 --> 00:26:32,950
+it would like make the first case first
+
+567
+00:26:28,750 --> 00:26:34,600
+letter uppercase so be an example there
+
+568
+00:26:32,950 --> 00:26:35,770
+are some built-in ones but most of the
+
+569
+00:26:34,600 --> 00:26:38,220
+time we're gonna be building your own as
+
+570
+00:26:35,770 --> 00:26:38,220
+far as I'm aware
+
+571
+00:26:39,900 --> 00:26:43,450
+so again yeah another popular one would
+
+572
+00:26:42,310 --> 00:26:44,560
+be like thing and we'll just want to be
+
+573
+00:26:43,450 --> 00:26:47,370
+like currency if you want to turn just
+
+574
+00:26:44,560 --> 00:26:54,340
+like US dollars that's another way
+
+575
+00:26:47,370 --> 00:26:56,680
+okay so let's I see we were okay so now
+
+576
+00:26:54,340 --> 00:26:59,530
+that we've covered v4 let's talk about V
+
+577
+00:26:56,680 --> 00:27:00,940
+pine so all this data manipulation is
+
+578
+00:26:59,530 --> 00:27:02,710
+nice but a lot of times what we need to
+
+579
+00:27:00,940 --> 00:27:05,650
+do is actually update HTML attributes
+
+580
+00:27:02,710 --> 00:27:07,540
+and so view provides us a directive V
+
+581
+00:27:05,650 --> 00:27:10,240
+bind as you can see here the long way of
+
+582
+00:27:07,540 --> 00:27:11,740
+writing in is V - pine with a semicolon
+
+583
+00:27:10,240 --> 00:27:13,830
+and then whatever attribute you want
+
+584
+00:27:11,740 --> 00:27:15,910
+whether its source title doesn't matter
+
+585
+00:27:13,830 --> 00:27:16,720
+I'll be using the shortcut way and this
+
+586
+00:27:15,910 --> 00:27:18,280
+is probably the way you're gonna be
+
+587
+00:27:16,720 --> 00:27:21,580
+seeing in most commonly in code bases
+
+588
+00:27:18,280 --> 00:27:26,530
+where you just prefix the attribute you
+
+589
+00:27:21,580 --> 00:27:28,360
+want with the semicolon and then and
+
+590
+00:27:26,530 --> 00:27:30,250
+then after that it's gonna be rendering
+
+591
+00:27:28,360 --> 00:27:33,880
+JavaScript so to show you what I mean by
+
+592
+00:27:30,250 --> 00:27:39,100
+that we are go so I've already defined
+
+593
+00:27:33,880 --> 00:27:40,480
+in the css3 different classes for
+
+594
+00:27:39,100 --> 00:27:41,950
+the wallet so you can see a galleon
+
+595
+00:27:40,480 --> 00:28:03,430
+sickles nuts and they just get a color
+
+596
+00:27:41,950 --> 00:28:07,900
+very simple yeah sure yep right here so
+
+597
+00:28:03,430 --> 00:28:10,620
+this I should so it's bound by actually
+
+598
+00:28:07,900 --> 00:28:12,940
+JavaScript syntax and so as far as just
+
+599
+00:28:10,620 --> 00:28:16,360
+when you do a for loop normally what you
+
+600
+00:28:12,940 --> 00:28:17,920
+want to do is in an object you yeah
+
+601
+00:28:16,360 --> 00:28:19,630
+normally it does like the value but in
+
+602
+00:28:17,920 --> 00:28:21,850
+case you want to include the key then
+
+603
+00:28:19,630 --> 00:28:23,410
+the key always comes second in that so
+
+604
+00:28:21,850 --> 00:28:25,420
+like the standard JavaScript syntax if
+
+605
+00:28:23,410 --> 00:28:26,740
+I'm not mistaken so that's the reason
+
+606
+00:28:25,420 --> 00:28:28,450
+why it's a mount label and that label
+
+607
+00:28:26,740 --> 00:28:29,560
+amount because normally you're looping
+
+608
+00:28:28,450 --> 00:28:37,300
+through the value and not necessarily
+
+609
+00:28:29,560 --> 00:28:40,360
+the key yep okay so we were about to
+
+610
+00:28:37,300 --> 00:28:42,550
+alright we're gonna show you V bind so I
+
+611
+00:28:40,360 --> 00:28:44,770
+want to attach any class to each of
+
+612
+00:28:42,550 --> 00:28:46,150
+these l eyes but I don't again I want to
+
+613
+00:28:44,770 --> 00:28:49,060
+do that in a dynamic way and not have to
+
+614
+00:28:46,150 --> 00:28:52,360
+manually code it so I'm going to go
+
+615
+00:28:49,060 --> 00:28:54,670
+ahead and declare the be bind class and
+
+616
+00:28:52,360 --> 00:28:57,010
+I'm going to just okay so the moment you
+
+617
+00:28:54,670 --> 00:28:58,780
+attach the V bind the stuff in between
+
+618
+00:28:57,010 --> 00:29:00,400
+your string is actually going to be
+
+619
+00:28:58,780 --> 00:29:02,830
+inline JavaScript it's not actually
+
+620
+00:29:00,400 --> 00:29:04,690
+parsing like a real string so in this
+
+621
+00:29:02,830 --> 00:29:06,550
+case I'm going to use label that I
+
+622
+00:29:04,690 --> 00:29:07,960
+referred to sort of in this loop and as
+
+623
+00:29:06,550 --> 00:29:11,620
+you can see here immediately
+
+624
+00:29:07,960 --> 00:29:13,750
+it applies the various classes that I
+
+625
+00:29:11,620 --> 00:29:16,240
+want for it galleons tickles nuts all
+
+626
+00:29:13,750 --> 00:29:19,080
+they're all done and so you can do this
+
+627
+00:29:16,240 --> 00:29:21,430
+with you know again any HTML attribute
+
+628
+00:29:19,080 --> 00:29:22,720
+you know styles and you can do some
+
+629
+00:29:21,430 --> 00:29:25,060
+really cool things as far as dynamic
+
+630
+00:29:22,720 --> 00:29:27,160
+updating and we'll have some fun sort of
+
+631
+00:29:25,060 --> 00:29:31,150
+code sandbox things for you guys to try
+
+632
+00:29:27,160 --> 00:29:37,740
+later on any questions about be binds so
+
+633
+00:29:31,150 --> 00:29:40,960
+far okay yes pretty straightforward
+
+634
+00:29:37,740 --> 00:29:43,240
+finally we have the V on and so as in
+
+635
+00:29:40,960 --> 00:29:44,860
+addition to manipulating data and your
+
+636
+00:29:43,240 --> 00:29:48,370
+attributes you obviously want to attach
+
+637
+00:29:44,860 --> 00:29:50,950
+event handlers and so you have your V on
+
+638
+00:29:48,370 --> 00:29:52,450
+and then there's a bunch of your
+
+639
+00:29:50,950 --> 00:29:54,130
+JavaScript events
+
+640
+00:29:52,450 --> 00:29:55,750
+so the shorthand for this one for Veon
+
+641
+00:29:54,130 --> 00:29:58,030
+is your at symbol and that's what we'll
+
+642
+00:29:55,750 --> 00:30:02,920
+be using moving forward and so I'm gonna
+
+643
+00:29:58,030 --> 00:30:05,050
+go back to the button here and so for
+
+644
+00:30:02,920 --> 00:30:06,910
+this when the button is clicked I want
+
+645
+00:30:05,050 --> 00:30:10,420
+to attach this method fired confetti
+
+646
+00:30:06,910 --> 00:30:18,390
+that I wrote down here so on click fire
+
+647
+00:30:10,420 --> 00:30:20,890
+and study and then I cook it magic yay
+
+648
+00:30:18,390 --> 00:30:25,390
+and that's all that's all there was to
+
+649
+00:30:20,890 --> 00:30:28,440
+it and so again very clean easy to read
+
+650
+00:30:25,390 --> 00:30:28,440
+easy to track ah
+
+651
+00:30:29,800 --> 00:30:37,150
+so right here the dooty dooty why did I
+
+652
+00:30:33,490 --> 00:30:38,980
+lose it right here so I did the app
+
+653
+00:30:37,150 --> 00:30:40,900
+click fire confetti and so this is
+
+654
+00:30:38,980 --> 00:30:42,970
+something that I already sort of set up
+
+655
+00:30:40,900 --> 00:30:45,540
+beforehand it's just like a JavaScript
+
+656
+00:30:42,970 --> 00:30:50,890
+function that again creates the confetti
+
+657
+00:30:45,540 --> 00:30:53,980
+so that's V on and those and then let's
+
+658
+00:30:50,890 --> 00:30:57,070
+see ah I have one more V model so this
+
+659
+00:30:53,980 --> 00:30:59,230
+is views pretty much single way of using
+
+660
+00:30:57,070 --> 00:31:00,520
+two-way data-binding and obviously as
+
+661
+00:30:59,230 --> 00:31:02,710
+far as state management goes for those
+
+662
+00:31:00,520 --> 00:31:05,080
+are aren't familiar with it single
+
+663
+00:31:02,710 --> 00:31:07,390
+statement single state flow is pretty
+
+664
+00:31:05,080 --> 00:31:09,160
+much like sorry unidirectional data flow
+
+665
+00:31:07,390 --> 00:31:11,470
+is sort of the popular method now but
+
+666
+00:31:09,160 --> 00:31:13,810
+the model does allow us to use two-way
+
+667
+00:31:11,470 --> 00:31:17,380
+data-binding if we need it and so back
+
+668
+00:31:13,810 --> 00:31:21,160
+to the button example we it's as simple
+
+669
+00:31:17,380 --> 00:31:23,230
+as typing V model equals and then the
+
+670
+00:31:21,160 --> 00:31:27,930
+data attribute that you want to tie to
+
+671
+00:31:23,230 --> 00:31:27,930
+and in this case would be message so now
+
+672
+00:31:28,980 --> 00:31:34,810
+sorry do I have it twice
+
+673
+00:31:33,190 --> 00:31:37,650
+oh hey left it in there when I was
+
+674
+00:31:34,810 --> 00:31:42,970
+playing around with it you're right okay
+
+675
+00:31:37,650 --> 00:31:47,530
+so yes so the V model here as we can see
+
+676
+00:31:42,970 --> 00:31:49,030
+is now is showing in the placeholder is
+
+677
+00:31:47,530 --> 00:31:50,950
+actually showing the value of this is
+
+678
+00:31:49,030 --> 00:31:55,540
+easy and then when you update it with
+
+679
+00:31:50,950 --> 00:31:57,340
+whatever you want you can see it's just
+
+680
+00:31:55,540 --> 00:32:01,570
+dynamically updating the data property
+
+681
+00:31:57,340 --> 00:32:05,400
+on the page so very simple very powerful
+
+682
+00:32:01,570 --> 00:32:05,400
+and just good to know
+
+683
+00:32:06,220 --> 00:32:12,200
+so there are event buses and view X
+
+684
+00:32:10,580 --> 00:32:14,360
+which is centrally used version of redux
+
+685
+00:32:12,200 --> 00:32:22,010
+and that is a topic we'll get into in
+
+686
+00:32:14,360 --> 00:32:24,110
+another time date okay so with that said
+
+687
+00:32:22,010 --> 00:32:26,990
+let's take a quick five minute break for
+
+688
+00:32:24,110 --> 00:32:28,910
+anyone you need to grab a drink or you
+
+689
+00:32:26,990 --> 00:32:30,410
+know yeah I get something to eat and
+
+690
+00:32:28,910 --> 00:32:32,750
+then for those with laptops you want to
+
+691
+00:32:30,410 --> 00:32:34,160
+try the final coding exercise we're
+
+692
+00:32:32,750 --> 00:32:35,540
+gonna have I'm gonna have some basic
+
+693
+00:32:34,160 --> 00:32:39,830
+tasks for you to just sort of practice
+
+694
+00:32:35,540 --> 00:32:47,560
+what we just went over and then yep so
+
+695
+00:32:39,830 --> 00:32:47,560
+we'll be back into the five minutes okay
+
+696
+00:32:47,680 --> 00:32:53,780
+so uh I thought it's best to obviously
+
+697
+00:32:51,200 --> 00:32:55,280
+give people some practice with what
+
+698
+00:32:53,780 --> 00:32:57,920
+we're learning so you guys can actually
+
+699
+00:32:55,280 --> 00:33:00,590
+reinforce what you're doing so as far as
+
+700
+00:32:57,920 --> 00:33:01,940
+the exercise we have just like your
+
+701
+00:33:00,590 --> 00:33:04,370
+basic for those who watch we can more to
+
+702
+00:33:01,940 --> 00:33:06,980
+basic Rick generator this is the final
+
+703
+00:33:04,370 --> 00:33:09,380
+product as you can see here I can go
+
+704
+00:33:06,980 --> 00:33:12,380
+ahead and type whatever I want in this
+
+705
+00:33:09,380 --> 00:33:14,780
+text input it'll update these down in
+
+706
+00:33:12,380 --> 00:33:16,130
+here and then in the event I want to you
+
+707
+00:33:14,780 --> 00:33:18,590
+know copy an image link from somewhere
+
+708
+00:33:16,130 --> 00:33:22,340
+it'll also paste in and then so let's
+
+709
+00:33:18,590 --> 00:33:37,910
+just do that real quick let's try let's
+
+710
+00:33:22,340 --> 00:33:42,800
+do strawberries and then I can click and
+
+711
+00:33:37,910 --> 00:33:44,480
+reposition in his face so that's so this
+
+712
+00:33:42,800 --> 00:33:49,220
+is what we'll sort of be building sort
+
+713
+00:33:44,480 --> 00:33:50,990
+of for the rest of the Meetup and so
+
+714
+00:33:49,220 --> 00:33:53,660
+your first so this is your starter pen
+
+715
+00:33:50,990 --> 00:33:55,880
+and your first task will break it up
+
+716
+00:33:53,660 --> 00:33:57,830
+into segments and so go ahead and
+
+717
+00:33:55,880 --> 00:34:00,200
+replace the pickle word with the actual
+
+718
+00:33:57,830 --> 00:34:03,290
+I cook it up with the noun probably the
+
+719
+00:34:00,200 --> 00:34:05,660
+same data and and make sure that's wired
+
+720
+00:34:03,290 --> 00:34:08,150
+up correctly so that you are dynamic and
+
+721
+00:34:05,660 --> 00:34:10,490
+dynamically updated in the text box as I
+
+722
+00:34:08,150 --> 00:34:11,870
+showed you earlier and then also go
+
+723
+00:34:10,490 --> 00:34:14,600
+ahead and wire up the background image
+
+724
+00:34:11,870 --> 00:34:17,150
+and so I'll give you guys a couple
+
+725
+00:34:14,600 --> 00:34:18,290
+minutes to kind of take a look and see
+
+726
+00:34:17,150 --> 00:34:20,570
+what you can do
+
+727
+00:34:18,290 --> 00:34:23,690
+and then I'll cut along with you guys
+
+728
+00:34:20,570 --> 00:34:26,480
+afterwards so I won't there were too
+
+729
+00:34:23,690 --> 00:34:28,040
+much of the wall okay for those of you
+
+730
+00:34:26,480 --> 00:34:29,149
+to keep work working on your own go
+
+731
+00:34:28,040 --> 00:34:31,310
+ahead and keep going I'm gonna go ahead
+
+732
+00:34:29,149 --> 00:34:33,080
+and start coding so everyone else
+
+733
+00:34:31,310 --> 00:34:35,330
+doesn't have a laptop can follow along
+
+734
+00:34:33,080 --> 00:34:37,250
+so our first task we have for this
+
+735
+00:34:35,330 --> 00:34:40,639
+exercise is to replace pickle with a
+
+736
+00:34:37,250 --> 00:34:45,250
+dynamic data property now so as we can
+
+737
+00:34:40,639 --> 00:34:47,540
+see here we have configured a new app
+
+738
+00:34:45,250 --> 00:34:49,820
+however we had not lifted up yet so
+
+739
+00:34:47,540 --> 00:34:54,200
+we're gonna hook up the main div class
+
+740
+00:34:49,820 --> 00:34:56,149
+with app ID and then the next thing
+
+741
+00:34:54,200 --> 00:34:57,980
+we're going to do is let's go ahead and
+
+742
+00:34:56,149 --> 00:35:02,510
+write something in here is this color
+
+743
+00:34:57,980 --> 00:35:04,550
+like cucumber and the solution of this
+
+744
+00:35:02,510 --> 00:35:09,470
+if you're gonna use our mustache syntax
+
+745
+00:35:04,550 --> 00:35:12,350
+and we're gonna like now in here now we
+
+746
+00:35:09,470 --> 00:35:16,190
+have dynamic dynamic property updating
+
+747
+00:35:12,350 --> 00:35:18,980
+within our HTML template pretty
+
+748
+00:35:16,190 --> 00:35:22,250
+straightforward task number two was to
+
+749
+00:35:18,980 --> 00:35:25,820
+none hook up this input to dynamically
+
+750
+00:35:22,250 --> 00:35:27,860
+update the non-property so all we got to
+
+751
+00:35:25,820 --> 00:35:31,400
+do is going to find this input and its
+
+752
+00:35:27,860 --> 00:35:32,810
+input noun right here and this is
+
+753
+00:35:31,400 --> 00:35:35,750
+anything so we're gonna use two-way
+
+754
+00:35:32,810 --> 00:35:37,580
+data-binding for this one go to the view
+
+755
+00:35:35,750 --> 00:35:50,420
+model and we're gonna attach it to our
+
+756
+00:35:37,580 --> 00:35:51,860
+noun property and finally we wanted to
+
+757
+00:35:50,420 --> 00:35:54,070
+tie in the background image this is
+
+758
+00:35:51,860 --> 00:35:57,100
+probably the this is the trickier part
+
+759
+00:35:54,070 --> 00:35:59,960
+so let's go ahead and first define a
+
+760
+00:35:57,100 --> 00:36:02,920
+background image or I think actually in
+
+761
+00:35:59,960 --> 00:36:06,830
+the exercise I felt like if you're all
+
+762
+00:36:02,920 --> 00:36:11,330
+and so what I'm gonna do now is I'm
+
+763
+00:36:06,830 --> 00:36:13,130
+gonna go to see it is okay so the reason
+
+764
+00:36:11,330 --> 00:36:14,600
+I put this in line now Craig it normally
+
+765
+00:36:13,130 --> 00:36:17,690
+with most your HTML code you're not
+
+766
+00:36:14,600 --> 00:36:19,310
+gonna actually put your your Styles in
+
+767
+00:36:17,690 --> 00:36:20,840
+line the reason we're doing it in this
+
+768
+00:36:19,310 --> 00:36:23,750
+case is because we're gonna make use of
+
+769
+00:36:20,840 --> 00:36:27,320
+the V bind property to make this dynamic
+
+770
+00:36:23,750 --> 00:36:31,480
+and so what we want to do here is we're
+
+771
+00:36:27,320 --> 00:36:33,430
+going to so this piece right here is
+
+772
+00:36:31,480 --> 00:36:34,840
+pickle so we're gonna go ahead and you
+
+773
+00:36:33,430 --> 00:36:36,820
+know just make sure it works in the face
+
+774
+00:36:34,840 --> 00:36:40,210
+of them here and so now we have to
+
+775
+00:36:36,820 --> 00:36:43,180
+rewrite this and so the gotcha
+
+776
+00:36:40,210 --> 00:36:45,970
+with dynamic styles with distribution is
+
+777
+00:36:43,180 --> 00:36:48,220
+that it needs to be written in an object
+
+778
+00:36:45,970 --> 00:36:51,670
+syntax so this is what is more like
+
+779
+00:36:48,220 --> 00:36:53,410
+JavaScript JavaScript styling so your
+
+780
+00:36:51,670 --> 00:36:57,370
+background image now has to be in this
+
+781
+00:36:53,410 --> 00:36:59,740
+channel case and then because it's
+
+782
+00:36:57,370 --> 00:37:01,330
+trying to interpret the URL as a
+
+783
+00:36:59,740 --> 00:37:05,170
+variable you have to actually wrap it in
+
+784
+00:37:01,330 --> 00:37:08,730
+a string so this is a string and we're
+
+785
+00:37:05,170 --> 00:37:08,730
+going to add something to it shortly
+
+786
+00:37:35,000 --> 00:37:40,160
+okay so this looks a little convoluted
+
+787
+00:37:37,700 --> 00:37:47,260
+but I will show you what I'm doing a
+
+788
+00:37:40,160 --> 00:37:47,260
+second all right
+
+789
+00:38:01,950 --> 00:38:09,120
+there's it uh URL plus oh there's a one
+
+790
+00:38:06,480 --> 00:38:13,050
+more tick here yeah you're probably
+
+791
+00:38:09,120 --> 00:38:14,910
+right well this is why we have I figure
+
+792
+00:38:13,050 --> 00:38:17,630
+out the solution just to reference it in
+
+793
+00:38:14,910 --> 00:38:17,630
+case something went wrong
+
+794
+00:38:25,060 --> 00:38:35,780
+right
+
+795
+00:38:27,200 --> 00:38:37,490
+yeah this is dissonant allergic okay so
+
+796
+00:38:35,780 --> 00:38:38,930
+once again less let me let me one line
+
+797
+00:38:37,490 --> 00:38:46,579
+this so this is easier for everyone to
+
+798
+00:38:38,930 --> 00:38:49,280
+read so as you can see here were we're
+
+799
+00:38:46,579 --> 00:38:51,410
+using the V vine on the style and once
+
+800
+00:38:49,280 --> 00:38:52,940
+again it's going to take in a JavaScript
+
+801
+00:38:51,410 --> 00:38:54,619
+object that's a post your normal like
+
+802
+00:38:52,940 --> 00:38:57,109
+inline CSS where you have your normal
+
+803
+00:38:54,619 --> 00:39:00,260
+casing so we have our object right here
+
+804
+00:38:57,109 --> 00:39:01,609
+that's marked here and here and then we
+
+805
+00:39:00,260 --> 00:39:04,130
+declare our CSS property we want to
+
+806
+00:39:01,609 --> 00:39:06,920
+change this background image and then
+
+807
+00:39:04,130 --> 00:39:08,510
+once again because URL we want to as a
+
+808
+00:39:06,920 --> 00:39:10,099
+string and not as like to interpret out
+
+809
+00:39:08,510 --> 00:39:13,040
+the variable we have to wrap this in
+
+810
+00:39:10,099 --> 00:39:15,859
+single single quotations and then we
+
+811
+00:39:13,040 --> 00:39:18,619
+again we drop in our data object right
+
+812
+00:39:15,859 --> 00:39:20,180
+here in image URL and then we close it
+
+813
+00:39:18,619 --> 00:39:22,400
+off with the press intact with the
+
+814
+00:39:20,180 --> 00:39:25,640
+string here and then close it off with
+
+815
+00:39:22,400 --> 00:39:28,970
+the object and now you have now we have
+
+816
+00:39:25,640 --> 00:39:31,670
+connected to image URL to it and then
+
+817
+00:39:28,970 --> 00:39:33,260
+similar to the noun 1 we are going to
+
+818
+00:39:31,670 --> 00:39:37,819
+attach a D model to the background image
+
+819
+00:39:33,260 --> 00:39:39,410
+and that we call the image URL so once
+
+820
+00:39:37,819 --> 00:39:44,270
+again let's go ahead and do that shot if
+
+821
+00:39:39,410 --> 00:39:48,920
+I paste in the strawberry URL there you
+
+822
+00:39:44,270 --> 00:39:51,170
+go that's how that works so again the
+
+823
+00:39:48,920 --> 00:39:53,140
+most convoluted piece of this is the
+
+824
+00:39:51,170 --> 00:39:56,000
+Gotcha which I failed to mention earlier
+
+825
+00:39:53,140 --> 00:39:58,460
+again when you're doing dynamic styling
+
+826
+00:39:56,000 --> 00:40:03,109
+it has to be a JavaScript CSS syntax not
+
+827
+00:39:58,460 --> 00:40:06,069
+straight CSS it's straight CSS any
+
+828
+00:40:03,109 --> 00:40:06,069
+questions about that so far
+
+829
+00:40:09,380 --> 00:40:12,380
+Phyllis
+
+830
+00:40:16,460 --> 00:40:22,619
+yep
+
+831
+00:40:18,290 --> 00:40:27,780
+yep I had an issue with that at one
+
+832
+00:40:22,619 --> 00:40:28,200
+point button maybe because of let's find
+
+833
+00:40:27,780 --> 00:40:33,800
+out
+
+834
+00:40:28,200 --> 00:40:33,800
+I do like yes
+
+835
+00:40:46,930 --> 00:40:50,070
+[Music]
+
+836
+00:40:50,570 --> 00:40:56,900
+so this is possible transpiling issue
+
+837
+00:40:57,530 --> 00:41:05,520
+possibly so the other way we could do
+
+838
+00:41:04,140 --> 00:41:08,300
+this actually if we wanted to make this
+
+839
+00:41:05,520 --> 00:41:08,300
+even easier on ourselves
+
+840
+00:41:13,880 --> 00:41:18,600
+let's declare it down here where we
+
+841
+00:41:16,890 --> 00:41:24,680
+don't have to deal with that up there so
+
+842
+00:41:18,600 --> 00:41:24,680
+you have this is an object that's good
+
+843
+00:41:38,849 --> 00:41:43,839
+so a six template literals do work in
+
+844
+00:41:42,460 --> 00:41:45,579
+some cases I think in this particular
+
+845
+00:41:43,839 --> 00:41:46,660
+case because of all the different mush
+
+846
+00:41:45,579 --> 00:41:48,640
+test syntax and everything running
+
+847
+00:41:46,660 --> 00:41:51,130
+around it's a little bit on the
+
+848
+00:41:48,640 --> 00:41:52,960
+complicated side so I will make a note
+
+849
+00:41:51,130 --> 00:41:54,880
+to come up with a demo that actually
+
+850
+00:41:52,960 --> 00:42:08,259
+works with that and get back to you on
+
+851
+00:41:54,880 --> 00:42:09,700
+that but that's a great question okay
+
+852
+00:42:08,259 --> 00:42:16,900
+any other questions for the first
+
+853
+00:42:09,700 --> 00:42:20,769
+exercise so going back now we're gonna
+
+854
+00:42:16,900 --> 00:42:22,180
+move on today we're going to use our
+
+855
+00:42:20,769 --> 00:42:27,099
+directives and methods that we can
+
+856
+00:42:22,180 --> 00:42:31,420
+practice doing that and so in the final
+
+857
+00:42:27,099 --> 00:42:36,400
+example that we have here you're able to
+
+858
+00:42:31,420 --> 00:42:39,999
+toggle the menu up here make it hidden
+
+859
+00:42:36,400 --> 00:42:41,229
+and show so you're welcome to use
+
+860
+00:42:39,999 --> 00:42:43,660
+whatever directives you'd like to use to
+
+861
+00:42:41,229 --> 00:42:45,549
+accomplish that but that is your first
+
+862
+00:42:43,660 --> 00:42:47,589
+task and for those of you that a little
+
+863
+00:42:45,549 --> 00:42:49,749
+bit more gung-ho then you can go ahead
+
+864
+00:42:47,589 --> 00:42:54,479
+and try and write your own method that
+
+865
+00:42:49,749 --> 00:42:57,489
+then allows you to dynamically update
+
+866
+00:42:54,479 --> 00:42:59,400
+the position of this face depending on
+
+867
+00:42:57,489 --> 00:43:02,049
+where you need it to be on the image and
+
+868
+00:42:59,400 --> 00:43:03,640
+it's gonna be as you can see here and
+
+869
+00:43:02,049 --> 00:43:05,019
+it's just a preview distribution it's
+
+870
+00:43:03,640 --> 00:43:07,779
+gonna be a little bit tricky because you
+
+871
+00:43:05,019 --> 00:43:11,049
+have to we're gonna using a V bind on
+
+872
+00:43:07,779 --> 00:43:18,069
+your style and updating some of the
+
+873
+00:43:11,049 --> 00:43:23,759
+absolute position of it so if that said
+
+874
+00:43:18,069 --> 00:43:30,279
+let me cue up the slides again and I
+
+875
+00:43:23,759 --> 00:43:31,509
+will leave I'll leave the JSP saw so in
+
+876
+00:43:30,279 --> 00:43:34,170
+case anyone wants a reference if they're
+
+877
+00:43:31,509 --> 00:43:34,170
+trying to figure it out
+
+878
+00:43:35,750 --> 00:43:53,910
+if there are any questions please let me
+
+879
+00:43:37,920 --> 00:44:03,660
+know you know and you around like back
+
+880
+00:43:53,910 --> 00:44:05,190
+tick okay go great
+
+881
+00:44:03,660 --> 00:44:06,750
+yeah that's an awesome fine you had a
+
+882
+00:44:05,190 --> 00:44:19,230
+yeah had them too early
+
+883
+00:44:06,750 --> 00:44:19,890
+yep yes yep so as far as yeah that's a
+
+884
+00:44:19,230 --> 00:44:21,960
+great question
+
+885
+00:44:19,890 --> 00:44:23,970
+as far as best practices go you should
+
+886
+00:44:21,960 --> 00:44:25,860
+turn it into a function it returns a new
+
+887
+00:44:23,970 --> 00:44:28,020
+object every time as far as like state
+
+888
+00:44:25,860 --> 00:44:29,970
+management goes for the purpose of this
+
+889
+00:44:28,020 --> 00:44:31,410
+exercise you don't have to do that it
+
+890
+00:44:29,970 --> 00:44:34,590
+should just work out of the box if you
+
+891
+00:44:31,410 --> 00:44:39,020
+prefer to as a complaint object but Evan
+
+892
+00:44:34,590 --> 00:44:42,660
+did recently come out with standards
+
+893
+00:44:39,020 --> 00:44:44,370
+people having checked out the docs he
+
+894
+00:44:42,660 --> 00:44:45,990
+has saga that I she came out which is
+
+895
+00:44:44,370 --> 00:44:47,400
+pretty great and he essentially has
+
+896
+00:44:45,990 --> 00:44:49,590
+these rule categories where he
+
+897
+00:44:47,400 --> 00:44:51,090
+prioritizes certain things that you
+
+898
+00:44:49,590 --> 00:44:52,620
+really should be doing any of you have
+
+899
+00:44:51,090 --> 00:45:07,590
+this best practices and that's one of
+
+900
+00:44:52,620 --> 00:45:10,260
+them which is so he said like he would
+
+901
+00:45:07,590 --> 00:45:11,850
+prefer that we all use functions but for
+
+902
+00:45:10,260 --> 00:45:13,320
+the purposes of like illustrating sort
+
+903
+00:45:11,850 --> 00:45:16,460
+of everything's working I kept
+
+904
+00:45:13,320 --> 00:45:16,460
+everything object to say
+
+905
+00:45:18,270 --> 00:45:31,170
+correct yep mm-hmm yep absolutely
+
+906
+00:45:23,840 --> 00:45:32,580
+great question all right so let's again
+
+907
+00:45:31,170 --> 00:45:38,250
+for those working feel free to continue
+
+908
+00:45:32,580 --> 00:45:44,960
+on suicide okay okay sorry I have the
+
+909
+00:45:38,250 --> 00:45:49,410
+final one up switch over okay
+
+910
+00:45:44,960 --> 00:45:53,760
+so our first test was to toggle this
+
+911
+00:45:49,410 --> 00:45:55,410
+piece and since we're gonna be toggling
+
+912
+00:45:53,760 --> 00:45:56,760
+on and off pretty frequently what I'm
+
+913
+00:45:55,410 --> 00:45:59,369
+going to do is I'm going to use the V
+
+914
+00:45:56,760 --> 00:46:02,130
+show directive again gonna use BL B if
+
+915
+00:45:59,369 --> 00:46:05,730
+that would have worked as well so for
+
+916
+00:46:02,130 --> 00:46:07,940
+the side menu here which is the wrapper
+
+917
+00:46:05,730 --> 00:46:11,510
+for this I like it
+
+918
+00:46:07,940 --> 00:46:13,740
+you'll do the V show and in this case
+
+919
+00:46:11,510 --> 00:46:16,410
+again let's make sure it works V show
+
+920
+00:46:13,740 --> 00:46:17,970
+false great so we're gonna do that we're
+
+921
+00:46:16,410 --> 00:46:21,090
+gonna have a dynamic property to manage
+
+922
+00:46:17,970 --> 00:46:23,940
+the state put up and so we're gonna call
+
+923
+00:46:21,090 --> 00:46:26,400
+that you know show side menu and I'm
+
+924
+00:46:23,940 --> 00:46:28,680
+gonna call that default doctor too and
+
+925
+00:46:26,400 --> 00:46:33,270
+so just to make sure that works we're
+
+926
+00:46:28,680 --> 00:46:37,890
+going to then say okay so side hey there
+
+927
+00:46:33,270 --> 00:46:41,550
+you go it works so now we want to attach
+
+928
+00:46:37,890 --> 00:46:44,520
+our event handler to the button in order
+
+929
+00:46:41,550 --> 00:46:45,720
+to toggle that back and forth so we're
+
+930
+00:46:44,520 --> 00:46:46,950
+gonna go look for that button and that
+
+931
+00:46:45,720 --> 00:46:49,950
+is right here
+
+932
+00:46:46,950 --> 00:46:59,190
+the pocket button and you do this on a
+
+933
+00:46:49,950 --> 00:47:01,260
+single line so that's easy to do so in
+
+934
+00:46:59,190 --> 00:47:03,240
+this event what we want to do we want to
+
+935
+00:47:01,260 --> 00:47:05,640
+listen for a click event right so at
+
+936
+00:47:03,240 --> 00:47:07,680
+click very simple and so I'm going to
+
+937
+00:47:05,640 --> 00:47:09,570
+show this the in line way and then we'll
+
+938
+00:47:07,680 --> 00:47:11,130
+refactor it back out so the easiest way
+
+939
+00:47:09,570 --> 00:47:14,640
+for us to do this is we're gonna say
+
+940
+00:47:11,130 --> 00:47:18,050
+okay show side menu and we're gonna make
+
+941
+00:47:14,640 --> 00:47:18,050
+it equal to nachos
+
+942
+00:47:22,820 --> 00:47:30,660
+yeah I can toggle back and forth so this
+
+943
+00:47:27,060 --> 00:47:32,270
+works okay for obviously shorter
+
+944
+00:47:30,660 --> 00:47:35,190
+inline JavaScript that you don't need
+
+945
+00:47:32,270 --> 00:47:36,870
+anything complicated for but let's just
+
+946
+00:47:35,190 --> 00:47:38,340
+say for instance this was like you know
+
+947
+00:47:36,870 --> 00:47:41,340
+a few lines of code that we need to
+
+948
+00:47:38,340 --> 00:47:44,760
+refactor so in this case you would just
+
+949
+00:47:41,340 --> 00:47:47,700
+declare your methods config and so we're
+
+950
+00:47:44,760 --> 00:47:51,480
+gonna call this you know toggle side
+
+951
+00:47:47,700 --> 00:47:55,340
+menu that's our function and then we're
+
+952
+00:47:51,480 --> 00:47:59,370
+going to go ahead like this right here
+
+953
+00:47:55,340 --> 00:48:02,910
+drop it in then we're gonna do toggles
+
+954
+00:47:59,370 --> 00:48:06,810
+side right this should work right
+
+955
+00:48:02,910 --> 00:48:12,510
+that doesn't yes that's right
+
+956
+00:48:06,810 --> 00:48:17,580
+it needs context and we need this so can
+
+957
+00:48:12,510 --> 00:48:20,010
+you do like this is fine okay so now you
+
+958
+00:48:17,580 --> 00:48:22,200
+we have positive on and off and again
+
+959
+00:48:20,010 --> 00:48:27,540
+this would have worked just for picking
+
+960
+00:48:22,200 --> 00:48:29,070
+it'll be if again since we're talking
+
+961
+00:48:27,540 --> 00:48:30,090
+about or not frequently and we don't
+
+962
+00:48:29,070 --> 00:48:31,470
+want to actually have to recreate
+
+963
+00:48:30,090 --> 00:48:33,360
+everything all at once we took on
+
+964
+00:48:31,470 --> 00:48:39,030
+visibility thing we show is the more
+
+965
+00:48:33,360 --> 00:48:41,370
+appropriate one to use okay so we're
+
+966
+00:48:39,030 --> 00:48:42,240
+gonna spend let's say about five to ten
+
+967
+00:48:41,370 --> 00:48:44,910
+minutes sort of talking about the
+
+968
+00:48:42,240 --> 00:48:46,830
+challenge number ways of doing this and
+
+969
+00:48:44,910 --> 00:48:50,370
+I just sort of thought I'd come up with
+
+970
+00:48:46,830 --> 00:48:51,540
+a fun one so in the final exercise again
+
+971
+00:48:50,370 --> 00:48:53,700
+what we could do is we could click
+
+972
+00:48:51,540 --> 00:48:58,560
+anywhere and it would update the
+
+973
+00:48:53,700 --> 00:49:00,180
+position of Rick's face and so what I'm
+
+974
+00:48:58,560 --> 00:49:03,480
+gonna do is go ahead and just kind of
+
+975
+00:49:00,180 --> 00:49:06,420
+walk you through it it's like putting in
+
+976
+00:49:03,480 --> 00:49:08,880
+my complicated a little bit so
+
+977
+00:49:06,420 --> 00:49:11,090
+ultimately what we're doing here is
+
+978
+00:49:08,880 --> 00:49:13,800
+we're updating this template wrapper and
+
+979
+00:49:11,090 --> 00:49:17,160
+so I've absolutely positioned this whole
+
+980
+00:49:13,800 --> 00:49:20,670
+thing and I've declared the top and the
+
+981
+00:49:17,160 --> 00:49:23,310
+left with the Y and X data properties
+
+982
+00:49:20,670 --> 00:49:25,650
+and then you have to attach the pixels
+
+983
+00:49:23,310 --> 00:49:28,170
+just to give it a dimensions so that it
+
+984
+00:49:25,650 --> 00:49:31,620
+actually knows where to move and then
+
+985
+00:49:28,170 --> 00:49:35,320
+I'll explain why I define the width here
+
+986
+00:49:31,620 --> 00:49:38,110
+in a second so as far as what's going on
+
+987
+00:49:35,320 --> 00:49:40,690
+you'll see here that in the image
+
+988
+00:49:38,110 --> 00:49:43,120
+wrapper here we have a click right and
+
+989
+00:49:40,690 --> 00:49:46,660
+this click calls the update position
+
+990
+00:49:43,120 --> 00:49:50,170
+function you scroll down to update
+
+991
+00:49:46,660 --> 00:49:58,120
+position you'll see that what I do is I
+
+992
+00:49:50,170 --> 00:50:00,010
+go ahead and I start by ok so when you
+
+993
+00:49:58,120 --> 00:50:02,760
+do a click event and you declare a
+
+994
+00:50:00,010 --> 00:50:05,380
+function on it you get past an event
+
+995
+00:50:02,760 --> 00:50:07,870
+parameter as part of it you don't have
+
+996
+00:50:05,380 --> 00:50:09,640
+to use it but in the case we do and so
+
+997
+00:50:07,870 --> 00:50:11,230
+ignoring these first these top two lines
+
+998
+00:50:09,640 --> 00:50:13,300
+essentially you'll see that I'm
+
+999
+00:50:11,230 --> 00:50:16,330
+dynamically updating the x and y
+
+1000
+00:50:13,300 --> 00:50:17,410
+properties with your event Kline Xing
+
+1001
+00:50:16,330 --> 00:50:20,110
+client Y and that's something you get
+
+1002
+00:50:17,410 --> 00:50:21,430
+for free when you as when you click on
+
+1003
+00:50:20,110 --> 00:50:23,350
+something so the client X tells you
+
+1004
+00:50:21,430 --> 00:50:27,550
+where your mouse is from the X and then
+
+1005
+00:50:23,350 --> 00:50:28,930
+Y essentially and then the reason why we
+
+1006
+00:50:27,550 --> 00:50:32,080
+have this piece right here as far as the
+
+1007
+00:50:28,930 --> 00:50:37,120
+wrapper width is because originally when
+
+1008
+00:50:32,080 --> 00:50:39,970
+I set this up the it anchors the div at
+
+1009
+00:50:37,120 --> 00:50:41,350
+the corner of it so essentially you'll
+
+1010
+00:50:39,970 --> 00:50:43,450
+notice that Rick's face is actually
+
+1011
+00:50:41,350 --> 00:50:45,460
+where my clicker is and so in order to
+
+1012
+00:50:43,450 --> 00:50:46,660
+position my mouse at there I had to
+
+1013
+00:50:45,460 --> 00:50:49,690
+essentially do a little bit of math as
+
+1014
+00:50:46,660 --> 00:50:51,490
+far as like sort of fixing it based on
+
+1015
+00:50:49,690 --> 00:50:52,450
+the width of the day of so that energy
+
+1016
+00:50:51,490 --> 00:50:54,700
+clicks on it
+
+1017
+00:50:52,450 --> 00:51:00,400
+whereas like just to show you if I take
+
+1018
+00:50:54,700 --> 00:51:03,280
+these two things off you'll notice now
+
+1019
+00:51:00,400 --> 00:51:05,260
+I'm at the corner which is fine like for
+
+1020
+00:51:03,280 --> 00:51:08,940
+demo purposes like but I kind of wanted
+
+1021
+00:51:05,260 --> 00:51:12,550
+to figure that out so that's why I have
+
+1022
+00:51:08,940 --> 00:51:15,100
+the wrapper with calculation here and I
+
+1023
+00:51:12,550 --> 00:51:17,620
+just defined the width in line on the
+
+1024
+00:51:15,100 --> 00:51:20,770
+HTML in order to access access the
+
+1025
+00:51:17,620 --> 00:51:23,140
+property with style with so and that
+
+1026
+00:51:20,770 --> 00:51:26,010
+allows me to click and then his face
+
+1027
+00:51:23,140 --> 00:51:30,000
+will be dead center on anywhere I click
+
+1028
+00:51:26,010 --> 00:51:30,000
+anyone have any questions about that
+
+1029
+00:51:32,460 --> 00:51:37,290
+ok
+
+1030
+00:51:34,780 --> 00:51:37,290
+solid
+
+1031
+00:51:37,420 --> 00:51:45,160
+let's unpack to the sides alright so as
+
+1032
+00:51:42,100 --> 00:51:46,810
+you guys can see there's a quote by Sir
+
+1033
+00:51:45,160 --> 00:51:48,430
+Dresner that I really liked in her
+
+1034
+00:51:46,810 --> 00:51:50,020
+course and she says you know view gives
+
+1035
+00:51:48,430 --> 00:51:51,520
+me what I want when I need it and then
+
+1036
+00:51:50,020 --> 00:51:53,500
+it gets out of my way and that's how I
+
+1037
+00:51:51,520 --> 00:51:54,940
+feel a lot when I work with you I'm like
+
+1038
+00:51:53,500 --> 00:51:56,860
+oh I want to hide something on my okay
+
+1039
+00:51:54,940 --> 00:51:58,740
+be if this all right now I'm moving on
+
+1040
+00:51:56,860 --> 00:52:01,540
+to something else
+
+1041
+00:51:58,740 --> 00:52:03,550
+well we recently built a an app and
+
+1042
+00:52:01,540 --> 00:52:05,470
+react native and so I can just tell you
+
+1043
+00:52:03,550 --> 00:52:06,820
+from personal experience just the hassle
+
+1044
+00:52:05,470 --> 00:52:08,530
+of trying to go back and rewrite
+
+1045
+00:52:06,820 --> 00:52:10,780
+functions to either remap things or
+
+1046
+00:52:08,530 --> 00:52:12,730
+reduce things it can it can be a bit
+
+1047
+00:52:10,780 --> 00:52:15,990
+much as far as management and so view is
+
+1048
+00:52:12,730 --> 00:52:18,610
+just it's really clean semantically and
+
+1049
+00:52:15,990 --> 00:52:22,990
+you know I just it's been great because
+
+1050
+00:52:18,610 --> 00:52:24,340
+of that uh so you know Congrats
+
+1051
+00:52:22,990 --> 00:52:26,550
+everybody we've essentially walked
+
+1052
+00:52:24,340 --> 00:52:29,920
+through three view applications in
+
+1053
+00:52:26,550 --> 00:52:32,710
+little over an hour and so you've gotten
+
+1054
+00:52:29,920 --> 00:52:34,570
+some practice as well but of course
+
+1055
+00:52:32,710 --> 00:52:36,010
+there's more this is just the 101 bare
+
+1056
+00:52:34,570 --> 00:52:38,740
+minimum essentials for getting something
+
+1057
+00:52:36,010 --> 00:52:41,290
+up and running as you can see here as
+
+1058
+00:52:38,740 --> 00:52:42,580
+some of you actually pointed out there
+
+1059
+00:52:41,290 --> 00:52:44,590
+are still a lot of things to talk about
+
+1060
+00:52:42,580 --> 00:52:46,780
+as far as computer properties filters
+
+1061
+00:52:44,590 --> 00:52:49,240
+props mix-ins I mean they're just a
+
+1062
+00:52:46,780 --> 00:52:50,980
+whole slew of things that view also
+
+1063
+00:52:49,240 --> 00:52:53,740
+provides for you when you're building
+
+1064
+00:52:50,980 --> 00:52:55,120
+your single page application and in the
+
+1065
+00:52:53,740 --> 00:52:57,790
+future we'll be having talks regarding
+
+1066
+00:52:55,120 --> 00:52:59,260
+these in the - one we're talking a bit
+
+1067
+00:52:57,790 --> 00:53:01,270
+about the concepts and then we'll have
+
+1068
+00:52:59,260 --> 00:53:02,530
+worked for specific talks to talk about
+
+1069
+00:53:01,270 --> 00:53:04,510
+you know app architecture
+
+1070
+00:53:02,530 --> 00:53:06,400
+testing managing Styles because
+
+1071
+00:53:04,510 --> 00:53:08,890
+obviously managing styles in Java skips
+
+1072
+00:53:06,400 --> 00:53:11,260
+is a hotly discussed topic in our realm
+
+1073
+00:53:08,890 --> 00:53:13,780
+so we'll have a talk about that and of
+
+1074
+00:53:11,260 --> 00:53:15,670
+course nowadays functional animation is
+
+1075
+00:53:13,780 --> 00:53:17,080
+the big deal so view does a beautiful
+
+1076
+00:53:15,670 --> 00:53:18,760
+job as far as managing those animations
+
+1077
+00:53:17,080 --> 00:53:23,110
+and so we will talk about that as well
+
+1078
+00:53:18,760 --> 00:53:25,330
+in the future and so as far as a sneak
+
+1079
+00:53:23,110 --> 00:53:32,230
+peek at vue.js 201 I wanted you guys to
+
+1080
+00:53:25,330 --> 00:53:32,530
+or Gary had suggested very sorry that's
+
+1081
+00:53:32,230 --> 00:53:41,080
+right
+
+1082
+00:53:32,530 --> 00:53:42,520
+Chris he suggested that we sort of show
+
+1083
+00:53:41,080 --> 00:53:45,970
+you guys so whenever you work over the
+
+1084
+00:53:42,520 --> 00:53:47,589
+meet zoom in if you guys do open a view
+
+1085
+00:53:45,970 --> 00:53:49,029
+code base in the future
+
+1086
+00:53:47,589 --> 00:53:50,619
+obviously people aren't working just
+
+1087
+00:53:49,029 --> 00:53:51,969
+like a single HTML file and then like
+
+1088
+00:53:50,619 --> 00:53:54,819
+writing everything in there that'd be
+
+1089
+00:53:51,969 --> 00:53:56,440
+impossible to manage and you just get
+
+1090
+00:53:54,819 --> 00:53:58,210
+out of hand really quick so I just want
+
+1091
+00:53:56,440 --> 00:53:59,650
+to give you guys a sneak peek into 201
+
+1092
+00:53:58,210 --> 00:54:02,259
+where we start talking about the like
+
+1093
+00:53:59,650 --> 00:54:04,630
+view template file so you can see here
+
+1094
+00:54:02,259 --> 00:54:07,900
+instead of like dot HTML gesture dot CSS
+
+1095
+00:54:04,630 --> 00:54:09,849
+we have a dot view and it's comprised of
+
+1096
+00:54:07,900 --> 00:54:11,200
+three blocks and so just to make a
+
+1097
+00:54:09,849 --> 00:54:13,329
+little easier I'm gonna open BS code
+
+1098
+00:54:11,200 --> 00:54:24,789
+real quick just show you guys it's
+
+1099
+00:54:13,329 --> 00:54:26,259
+simple scaffold okay so it's comprised
+
+1100
+00:54:24,789 --> 00:54:27,519
+of that your view file is gonna be
+
+1101
+00:54:26,259 --> 00:54:29,229
+comprised of three blocks whenever
+
+1102
+00:54:27,519 --> 00:54:31,390
+you're looking at it template pretty
+
+1103
+00:54:29,229 --> 00:54:33,819
+straightforward this is your HTML
+
+1104
+00:54:31,390 --> 00:54:35,109
+template basic rule of thumb at the
+
+1105
+00:54:33,819 --> 00:54:36,640
+moment I don't think they've done this
+
+1106
+00:54:35,109 --> 00:54:40,569
+indeed yet but you can only have it can
+
+1107
+00:54:36,640 --> 00:54:42,700
+only return a single a single element
+
+1108
+00:54:40,569 --> 00:54:44,410
+you can't have two next to each other I
+
+1109
+00:54:42,700 --> 00:54:48,369
+think Pete react has already fixed this
+
+1110
+00:54:44,410 --> 00:54:49,690
+but I don't think you has yet and then
+
+1111
+00:54:48,369 --> 00:54:51,069
+obviously your script here is your basic
+
+1112
+00:54:49,690 --> 00:54:55,180
+JavaScript as you're used to in your
+
+1113
+00:54:51,069 --> 00:54:57,819
+HTML and this is your style block for
+
+1114
+00:54:55,180 --> 00:54:59,979
+writing your CSS some cool things about
+
+1115
+00:54:57,819 --> 00:55:01,210
+the style block just to mention is that
+
+1116
+00:54:59,979 --> 00:55:03,009
+you can actually define the type of
+
+1117
+00:55:01,210 --> 00:55:04,749
+language you'd like to use and it'll
+
+1118
+00:55:03,009 --> 00:55:07,089
+actually you might need to install a
+
+1119
+00:55:04,749 --> 00:55:08,890
+package or two but generally it's very
+
+1120
+00:55:07,089 --> 00:55:10,059
+convenient to be able to just switch to
+
+1121
+00:55:08,890 --> 00:55:11,380
+the if you're like oh I really like
+
+1122
+00:55:10,059 --> 00:55:12,609
+stylize I'm just going to stylus you
+
+1123
+00:55:11,380 --> 00:55:15,789
+don't have to do anything special
+
+1124
+00:55:12,609 --> 00:55:17,920
+regarding that and even cooler is that
+
+1125
+00:55:15,789 --> 00:55:19,809
+you can just add a scope to attribute to
+
+1126
+00:55:17,920 --> 00:55:22,690
+your style tags and that will scope all
+
+1127
+00:55:19,809 --> 00:55:23,859
+your Styles to that component which is
+
+1128
+00:55:22,690 --> 00:55:29,380
+pretty cool and we'll talk more about
+
+1129
+00:55:23,859 --> 00:55:32,710
+that in managing styles for view anyways
+
+1130
+00:55:29,380 --> 00:55:35,069
+so yep so this is like your basic
+
+1131
+00:55:32,710 --> 00:55:37,509
+architecture that you can see here and
+
+1132
+00:55:35,069 --> 00:55:38,859
+you can see that they've broken out into
+
+1133
+00:55:37,509 --> 00:55:41,380
+different components so this is like the
+
+1134
+00:55:38,859 --> 00:55:44,670
+sneak peek here we've actually defined a
+
+1135
+00:55:41,380 --> 00:55:47,710
+component to use here to-do list and
+
+1136
+00:55:44,670 --> 00:55:50,289
+this will then essentially insert all
+
+1137
+00:55:47,710 --> 00:55:52,299
+the mark-up from in here so I guess it's
+
+1138
+00:55:50,289 --> 00:55:53,559
+pretty interesting as far as component
+
+1139
+00:55:52,299 --> 00:55:55,719
+architecture goes I mean anyone working
+
+1140
+00:55:53,559 --> 00:55:57,969
+with modern day client frameworks are
+
+1141
+00:55:55,719 --> 00:56:01,320
+familiar with this but it's just you
+
+1142
+00:55:57,969 --> 00:56:16,089
+know do you has this as well
+
+1143
+00:56:01,320 --> 00:56:18,160
+so with that said yep idea yep that
+
+1144
+00:56:16,089 --> 00:56:19,690
+allows you to scope things for example
+
+1145
+00:56:18,160 --> 00:56:21,430
+again like a button component you might
+
+1146
+00:56:19,690 --> 00:56:23,560
+want to scope the styles there instead
+
+1147
+00:56:21,430 --> 00:56:25,540
+of having this bloated CSS file and so
+
+1148
+00:56:23,560 --> 00:56:32,320
+again this is one of the reasons you
+
+1149
+00:56:25,540 --> 00:56:33,609
+might have a global style so it's it's
+
+1150
+00:56:32,320 --> 00:56:35,080
+nice from a performance standpoint just
+
+1151
+00:56:33,609 --> 00:56:39,000
+to only give users what they need and
+
+1152
+00:56:35,080 --> 00:56:39,000
+not just like this gigantic CSS file
+
+1153
+00:56:41,339 --> 00:56:56,260
+exactly right which is pretty great and
+
+1154
+00:56:52,980 --> 00:56:58,089
+okay so as additional resources the
+
+1155
+00:56:56,260 --> 00:56:59,470
+vue.js Doc's are done remarkably well
+
+1156
+00:56:58,089 --> 00:57:01,210
+Evan you and his team have done a great
+
+1157
+00:56:59,470 --> 00:57:03,730
+job as far as documenting and providing
+
+1158
+00:57:01,210 --> 00:57:05,800
+examples for what they do and as I
+
+1159
+00:57:03,730 --> 00:57:08,200
+mentioned before there's a style guide
+
+1160
+00:57:05,800 --> 00:57:09,520
+in case anybody missed it before and so
+
+1161
+00:57:08,200 --> 00:57:11,710
+these are sort of essentially his like
+
+1162
+00:57:09,520 --> 00:57:13,780
+best practices recommendations for when
+
+1163
+00:57:11,710 --> 00:57:15,070
+you're writing a view app such as
+
+1164
+00:57:13,780 --> 00:57:16,180
+something to keep in mind it's in as you
+
+1165
+00:57:15,070 --> 00:57:20,230
+can see it's in beta so this is pretty
+
+1166
+00:57:16,180 --> 00:57:22,300
+new and then as far as people who like
+
+1167
+00:57:20,230 --> 00:57:24,430
+going through courses front-end masters
+
+1168
+00:57:22,300 --> 00:57:27,339
+has an introduction to view course by
+
+1169
+00:57:24,430 --> 00:57:28,540
+Sarah Dresner and she's awesome and so I
+
+1170
+00:57:27,339 --> 00:57:30,280
+just went do that just kind of see what
+
+1171
+00:57:28,540 --> 00:57:32,440
+she taught and definitely great one to
+
+1172
+00:57:30,280 --> 00:57:33,790
+check out and then for those who like
+
+1173
+00:57:32,440 --> 00:57:35,770
+sort of on-demand and you can like
+
+1174
+00:57:33,790 --> 00:57:37,240
+download them udemy is a great option as
+
+1175
+00:57:35,770 --> 00:57:39,040
+well you have a bunch of view J's
+
+1176
+00:57:37,240 --> 00:57:40,869
+courses on there the one in by
+
+1177
+00:57:39,040 --> 00:57:42,339
+Maximilian is the one I first took and
+
+1178
+00:57:40,869 --> 00:57:45,609
+that's not kind of how I got into view
+
+1179
+00:57:42,339 --> 00:57:47,260
+and but if you do go on udemy do not buy
+
+1180
+00:57:45,609 --> 00:57:48,760
+them full price they always have coupon
+
+1181
+00:57:47,260 --> 00:57:50,710
+codes to make them like ten dollars from
+
+1182
+00:57:48,760 --> 00:57:53,109
+the original two hundred dollars so do
+
+1183
+00:57:50,710 --> 00:57:54,880
+not buy them at full price and finally
+
+1184
+00:57:53,109 --> 00:57:56,470
+there is a view jeaious discord channel
+
+1185
+00:57:54,880 --> 00:58:01,540
+so feel free to join that it's totally
+
+1186
+00:57:56,470 --> 00:58:03,070
+free with that said there's footnotes so
+
+1187
+00:58:01,540 --> 00:58:08,040
+if case you want to check out Evan used
+
+1188
+00:58:03,070 --> 00:58:08,040
+story and yep that's it
+
